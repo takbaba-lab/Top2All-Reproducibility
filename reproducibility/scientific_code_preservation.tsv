@@ -1,0 +1,19 @@
+script	computation_ast_identical	comparison_scope
+scripts/training/train_log1p_loco_nocond.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/prediction/predict.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/prediction/predict_loco_nocond.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/training/train_scale_head_loco_nocond.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/training/train_scale_head_oof.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/training/train_log1p_oof.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/training/train_log1p_oof_nocond.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/prediction/predict_nocond.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/training/train_scale_head_oof_nocond.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/evaluate_oof_foldlocal_hidden_stress.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/compare_oof_top2all_vs_mean_baselines.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/evaluate_oof_nonTopN.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/evaluate_loco_top1000_nocond.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/evaluate_loco_centroid_shift_baselines.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/evaluate_loco_training_centroid_shift.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/evaluate_oof_genewise_fixed_nonTopN.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/evaluate_oof_within_condition_residuals.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.
+scripts/evaluation/evaluate_loco_decomposition.py	True	Exclude docstrings, string labels/paths, and setup_run_logging; preserve operations, numeric constants and control flow.

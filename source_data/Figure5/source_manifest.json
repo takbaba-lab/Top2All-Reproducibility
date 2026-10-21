@@ -1,0 +1,19 @@
+{
+  "files": [
+    {
+      "source": "fig5b_centroid_shift_3seeds.csv",
+      "copy": "fig5b_centroid_shift_3seeds.csv",
+      "sha256": "41d7f69b9e5da3665ecbc7a03e4e4e39d5ba2adcd94583c93fd9355884512f16"
+    },
+    {
+      "source": "fig5c_loco_retrieval_by_condition.csv",
+      "copy": "fig5c_loco_retrieval_by_condition.csv",
+      "sha256": "27aa997a9cb0cd5fcd68b5ba9b6caefffffc1853e16dfed23a61a000dbf34fa8"
+    },
+    {
+      "source": "fig5d_strict_oof_retrieval.csv",
+      "copy": "fig5d_strict_oof_retrieval.csv",
+      "sha256": "4285e7472d26b6ed656de4590242a3569ebe79f95b541055025a7f7fafd7ae70"
+    }
+  ]
+}

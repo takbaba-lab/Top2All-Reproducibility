@@ -1,0 +1,21 @@
+panel,target_set,topn,seed_log1p,seed_scale,metric,n_genes,value,source_selector,source_column,operation,display_x
+D,bridge6951,100,42,1234,mae,6951,0.17560164013395638,"{""metric"":""mae"",""seed_log1p"":42,""target_set"":""bridge6951"",""topn"":100}",value,cell,0
+D,bridge6951,200,42,1234,mae,6951,0.18354421185085937,"{""metric"":""mae"",""seed_log1p"":42,""target_set"":""bridge6951"",""topn"":200}",value,cell,1
+D,bridge6951,300,42,1234,mae,6951,0.18909914000150785,"{""metric"":""mae"",""seed_log1p"":42,""target_set"":""bridge6951"",""topn"":300}",value,cell,2
+D,bridge6951,500,42,1234,mae,6951,0.22031458788243827,"{""metric"":""mae"",""seed_log1p"":42,""target_set"":""bridge6951"",""topn"":500}",value,cell,3
+D,bridge6951,1000,42,1234,mae,6951,0.23450226426449994,"{""metric"":""mae"",""seed_log1p"":42,""target_set"":""bridge6951"",""topn"":1000}",value,cell,4
+D,bridge6951,100,43,1235,mae,6951,0.17682165334446942,"{""metric"":""mae"",""seed_log1p"":43,""target_set"":""bridge6951"",""topn"":100}",value,cell,0
+D,bridge6951,200,43,1235,mae,6951,0.18878688492988135,"{""metric"":""mae"",""seed_log1p"":43,""target_set"":""bridge6951"",""topn"":200}",value,cell,1
+D,bridge6951,300,43,1235,mae,6951,0.1942679903197446,"{""metric"":""mae"",""seed_log1p"":43,""target_set"":""bridge6951"",""topn"":300}",value,cell,2
+D,bridge6951,500,43,1235,mae,6951,0.21773988920257223,"{""metric"":""mae"",""seed_log1p"":43,""target_set"":""bridge6951"",""topn"":500}",value,cell,3
+D,bridge6951,1000,43,1235,mae,6951,0.2357544008599044,"{""metric"":""mae"",""seed_log1p"":43,""target_set"":""bridge6951"",""topn"":1000}",value,cell,4
+D,bridge6951,100,44,1236,mae,6951,0.17726685360628194,"{""metric"":""mae"",""seed_log1p"":44,""target_set"":""bridge6951"",""topn"":100}",value,cell,0
+D,bridge6951,200,44,1236,mae,6951,0.1780357466247288,"{""metric"":""mae"",""seed_log1p"":44,""target_set"":""bridge6951"",""topn"":200}",value,cell,1
+D,bridge6951,300,44,1236,mae,6951,0.18478396054338223,"{""metric"":""mae"",""seed_log1p"":44,""target_set"":""bridge6951"",""topn"":300}",value,cell,2
+D,bridge6951,500,44,1236,mae,6951,0.21235857627199436,"{""metric"":""mae"",""seed_log1p"":44,""target_set"":""bridge6951"",""topn"":500}",value,cell,3
+D,bridge6951,1000,44,1236,mae,6951,0.23476534037842264,"{""metric"":""mae"",""seed_log1p"":44,""target_set"":""bridge6951"",""topn"":1000}",value,cell,4
+D,bridge6951,100,3-seed median,3-seed median,mae,6951,0.17682165334446942,"{""metric"":""mae"",""target_set"":""bridge6951"",""topn"":100}",value,median,0
+D,bridge6951,200,3-seed median,3-seed median,mae,6951,0.18354421185085937,"{""metric"":""mae"",""target_set"":""bridge6951"",""topn"":200}",value,median,1
+D,bridge6951,300,3-seed median,3-seed median,mae,6951,0.18909914000150785,"{""metric"":""mae"",""target_set"":""bridge6951"",""topn"":300}",value,median,2
+D,bridge6951,500,3-seed median,3-seed median,mae,6951,0.21773988920257223,"{""metric"":""mae"",""target_set"":""bridge6951"",""topn"":500}",value,median,3
+D,bridge6951,1000,3-seed median,3-seed median,mae,6951,0.23476534037842264,"{""metric"":""mae"",""target_set"":""bridge6951"",""topn"":1000}",value,median,4

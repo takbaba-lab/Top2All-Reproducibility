@@ -1,0 +1,6 @@
+# Reference model environment from the locally retained environment export.
+# It is not a complete, run-bound lockfile; see reproducibility/ENVIRONMENT.md.
+torch==2.6.0
+transformers==4.57.3
+numpy==2.4.0
+pandas==2.3.3

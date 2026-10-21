@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "Please cite this reproducibility repository and the associated Top2All manuscript. A DOI will be added after archiving."
+type: software
+title: "Top2All: Benchmarking sparse-to-transcriptome reconstruction from high-expression profiles across sex- and sex-steroid-defined conditions"
+authors:
+  - family-names: Nishio
+    given-names: Yuki
+  - family-names: Yamashita
+    given-names: Takayoshi
+  - family-names: Baba
+    given-names: Takashi
+    email: baba.takashi.547@m.kyushu-u.ac.jp
+repository-code: "https://github.com/takbaba-lab/Top2All-Reproducibility"
+license: MIT
+# Add the repository's Zenodo DOI as a top-level doi field after deposit.
+# Add a preferred-citation only when manuscript publication metadata is available.

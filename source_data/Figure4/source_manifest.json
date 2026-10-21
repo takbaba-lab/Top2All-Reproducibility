@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "source": "fig4b_oof_sample_residuals.csv",
+      "copy": "fig4b_oof_sample_residuals.csv",
+      "sha256": "13953198ad5e3d1a9449a45f32ed083333d9e08c94a3b8ae851557fe2e3beee1"
+    },
+    {
+      "source": "fig4c_oof_residual_summary.csv",
+      "copy": "fig4c_oof_residual_summary.csv",
+      "sha256": "f2d3bab053f3d54c11ae0d5fde37630bc449305fd0926ea0bcbb85de79a78afa"
+    },
+    {
+      "source": "fig4d_loco_residual_genewise_3seeds.csv",
+      "copy": "fig4d_loco_residual_genewise_3seeds.csv",
+      "sha256": "29a630749d30bd2b82524895c46b98c525e5affef1913b4089009d29d68229dc"
+    },
+    {
+      "source": "fig4e_residual_amplitude_3seeds.csv",
+      "copy": "fig4e_residual_amplitude_3seeds.csv",
+      "sha256": "97d97917f3853130e3392bff45aa9ab3435fba4782606a8a195d1c11d734f577"
+    }
+  ]
+}

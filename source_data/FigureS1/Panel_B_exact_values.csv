@@ -1,0 +1,25 @@
+panel,method,seed_log1p,quartile,n_genes,metric,value,source_selector,source_column,operation,n_selected,display_x,representation
+B,Top2All,42,Q1,1738,mae,0.2185678741632202,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q1""}",mae_median,cell,1,0,individual
+B,Top2All,42,Q2,1738,mae,0.2098148794961835,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q2""}",mae_median,cell,1,1,individual
+B,Top2All,42,Q3,1737,mae,0.2195601537517325,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q3""}",mae_median,cell,1,2,individual
+B,Top2All,42,Q4,1738,mae,0.3007486410030633,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q4""}",mae_median,cell,1,3,individual
+B,Top2All,43,Q1,1738,mae,0.2359459373744268,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":43,""trueSD_quantile"":""Q1""}",mae_median,cell,1,0,individual
+B,Top2All,43,Q2,1738,mae,0.2272175446350286,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":43,""trueSD_quantile"":""Q2""}",mae_median,cell,1,1,individual
+B,Top2All,43,Q3,1737,mae,0.2299499951922864,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":43,""trueSD_quantile"":""Q3""}",mae_median,cell,1,2,individual
+B,Top2All,43,Q4,1738,mae,0.3068935306376262,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":43,""trueSD_quantile"":""Q4""}",mae_median,cell,1,3,individual
+B,Top2All,44,Q1,1738,mae,0.2552109641498955,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":44,""trueSD_quantile"":""Q1""}",mae_median,cell,1,0,individual
+B,Top2All,44,Q2,1738,mae,0.252138052857176,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":44,""trueSD_quantile"":""Q2""}",mae_median,cell,1,1,individual
+B,Top2All,44,Q3,1737,mae,0.2525519533098996,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":44,""trueSD_quantile"":""Q3""}",mae_median,cell,1,2,individual
+B,Top2All,44,Q4,1738,mae,0.3292166968678366,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":44,""trueSD_quantile"":""Q4""}",mae_median,cell,1,3,individual
+B,Top2All,3-seed median,Q1,1738,mae,0.23594593737442679,"{""method"":""Top2All"",""mode"":""condition"",""trueSD_quantile"":""Q1""}",mae_median,median,3,0,median
+B,Top2All,3-seed median,Q2,1738,mae,0.22721754463502861,"{""method"":""Top2All"",""mode"":""condition"",""trueSD_quantile"":""Q2""}",mae_median,median,3,1,median
+B,Top2All,3-seed median,Q3,1737,mae,0.2299499951922864,"{""method"":""Top2All"",""mode"":""condition"",""trueSD_quantile"":""Q3""}",mae_median,median,3,2,median
+B,Top2All,3-seed median,Q4,1738,mae,0.3068935306376262,"{""method"":""Top2All"",""mode"":""condition"",""trueSD_quantile"":""Q4""}",mae_median,median,3,3,median
+B,GlobalMean,42,Q1,1738,mae,0.2230399369349888,"{""method"":""GlobalMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q1""}",mae_median,cell,1,0,GlobalMean
+B,GlobalMean,42,Q2,1738,mae,0.2781218113973515,"{""method"":""GlobalMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q2""}",mae_median,cell,1,1,GlobalMean
+B,GlobalMean,42,Q3,1737,mae,0.3200472894750936,"{""method"":""GlobalMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q3""}",mae_median,cell,1,2,GlobalMean
+B,GlobalMean,42,Q4,1738,mae,0.4112920061609345,"{""method"":""GlobalMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q4""}",mae_median,cell,1,3,GlobalMean
+B,SameConditionMean,42,Q1,1738,mae,0.0842815190458221,"{""method"":""SameConditionMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q1""}",mae_median,cell,1,0,SameConditionMean
+B,SameConditionMean,42,Q2,1738,mae,0.0903787085436188,"{""method"":""SameConditionMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q2""}",mae_median,cell,1,1,SameConditionMean
+B,SameConditionMean,42,Q3,1737,mae,0.1055586191482456,"{""method"":""SameConditionMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q3""}",mae_median,cell,1,2,SameConditionMean
+B,SameConditionMean,42,Q4,1738,mae,0.1573341502303738,"{""method"":""SameConditionMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q4""}",mae_median,cell,1,3,SameConditionMean

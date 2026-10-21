@@ -1,0 +1,24 @@
+{
+  "files": [
+    {
+      "source": "fig2a_samplewise_baselines.csv",
+      "copy": "fig2a_samplewise_baselines.csv",
+      "sha256": "12e9b8f3fcf5addd374e48d97cbbf628c988f77fe65b3b9e51d23907ed53e67f"
+    },
+    {
+      "source": "fig2bc_genewise_true_variable.csv",
+      "copy": "fig2bc_genewise_true_variable.csv",
+      "sha256": "e5e12a6275f9d94f00426434c40b4172e393e33f639b8228260e78dcbe28836d"
+    },
+    {
+      "source": "fig2d_genewise_method_ranking.csv",
+      "copy": "fig2d_genewise_method_ranking.csv",
+      "sha256": "4285e7472d26b6ed656de4590242a3569ebe79f95b541055025a7f7fafd7ae70"
+    },
+    {
+      "source": "fig2d_samplewise_method_ranking.csv",
+      "copy": "fig2d_samplewise_method_ranking.csv",
+      "sha256": "bfd5df90a68605dd8f46bf7bc32234660ddfeb4c4134790156179ffeb692898f"
+    }
+  ]
+}

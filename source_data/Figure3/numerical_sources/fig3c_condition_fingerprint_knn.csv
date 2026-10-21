@@ -1,0 +1,4 @@
+k,selected_neighbor_rows,same_condition_fraction,median_per_test_same_condition_fraction
+1,24,1.0,1.0
+3,72,0.6527777777777778,0.6666666666666666
+5,120,0.4,0.4

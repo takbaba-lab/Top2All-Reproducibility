@@ -1,0 +1,7 @@
+method,metric,value,display_x,color,marker
+seed42_1234,pearson_median,0.7917368574657585,0,#0072B2,o
+seed43_1235,pearson_median,0.7518972161345728,1,#0072B2,o
+seed44_1236,pearson_median,0.7832621342837901,2,#0072B2,o
+knn1,pearson_median,0.9090954359573056,3.7,#D55E00,s
+knn3,pearson_median,0.910268636282254,4.7,#E69F00,^
+knn5,pearson_median,0.8848203989739134,5.7,#CC79A7,D

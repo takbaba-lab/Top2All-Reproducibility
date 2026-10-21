@@ -1,0 +1,9 @@
+{
+  "files": [
+    {
+      "source": "input_depth_metrics.tsv",
+      "copy": "input_depth_metrics.tsv",
+      "sha256": "37783a6c1908acf96de872bda733e324a9ba5a77d57d5f2602fc45ddce0b0e84"
+    }
+  ]
+}

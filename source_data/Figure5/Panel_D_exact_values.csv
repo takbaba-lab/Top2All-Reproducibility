@@ -1,0 +1,7 @@
+method,metric,value,display_x,color,marker
+seed42_1234,mae_median,0.2345022642644999,0,#0072B2,o
+seed43_1235,mae_median,0.2357544008599044,1,#0072B2,o
+seed44_1236,mae_median,0.2347653403784226,2,#0072B2,o
+knn1,mae_median,0.1128938329487865,3.7,#D55E00,s
+knn3,mae_median,0.1109280035740493,4.7,#E69F00,^
+knn5,mae_median,0.1255011261497672,5.7,#CC79A7,D

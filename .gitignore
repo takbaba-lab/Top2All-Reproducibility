@@ -1,0 +1,12 @@
+.DS_Store
+__pycache__/
+*.py[cod]
+.venv/
+.local/
+external_assets/
+reproduced_figures/
+outputs/
+*.pt
+*.bin
+*.safetensors
+*.pkl

@@ -1,0 +1,7 @@
+seed,metric,median_over_eight_conditions,display_x,color,marker
+42,slope,0.1315868876689717,-0.1,#0072B2,o
+43,slope,0.14774625657767265,0.0,#D55E00,o
+44,slope,0.1378591059524098,0.1,#009E73,o
+42,pred_true_sd_ratio,0.44458285867119274,0.9,#0072B2,o
+43,pred_true_sd_ratio,0.44747729711064221,1.0,#D55E00,o
+44,pred_true_sd_ratio,0.43892195858318972,1.1,#009E73,o

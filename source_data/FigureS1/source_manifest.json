@@ -1,0 +1,9 @@
+{
+  "files": [
+    {
+      "source": "gene_variability_metrics.tsv",
+      "copy": "gene_variability_metrics.tsv",
+      "sha256": "6cce3f701dcbbb6a17ee91c58f5b214a68c474fd86e333379719f20fc262dabe"
+    }
+  ]
+}

@@ -1,0 +1,4 @@
+method,model_type,metric,value,display_x
+SameConditionMean,no_condition,true_expression_overall_mae,0.0522515251307376,0
+Top2All no condition,no_condition,true_expression_overall_mae,0.0911417882900957,1
+Top2All + condition,condition_aware,true_expression_overall_mae,0.0924821354048487,2

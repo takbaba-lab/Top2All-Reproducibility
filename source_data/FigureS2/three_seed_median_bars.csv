@@ -1,0 +1,9 @@
+panel,analysis,metric,n_seeds,three_seed_median,x_min,x_max
+A,OOF_condition,pearson,3,0.75889977543378584,-0.21,0.21
+A,OOF_nocond,pearson,3,0.78326212380604221,0.79,1.21
+A,LOCO_no_condition,pearson,3,0.62814342015382474,1.79,2.21
+A,strict_foldlocal_no_condition,pearson,3,0.7832621342837901,2.79,3.21
+B,OOF_condition,mae,3,0.24642554139025419,-0.21,0.21
+B,OOF_nocond,mae,3,0.2347653616331761,0.79,1.21
+B,LOCO_no_condition,mae,3,0.2390266607729899,1.79,2.21
+B,strict_foldlocal_no_condition,mae,3,0.23476534037842259,2.79,3.21

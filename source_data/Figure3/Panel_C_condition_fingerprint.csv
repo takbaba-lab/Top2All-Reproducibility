@@ -1,0 +1,4 @@
+k,observed_fraction,selected_neighbor_rows,chance_fraction,chance_definition
+1,1.0,24,0.125,1/8 = 2/16
+3,0.6527777777777778,72,0.125,1/8 = 2/16
+5,0.4,120,0.125,1/8 = 2/16

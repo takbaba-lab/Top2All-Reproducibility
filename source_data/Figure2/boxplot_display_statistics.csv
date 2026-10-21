@@ -1,0 +1,7 @@
+panel,method,n_genes,metric,median,q1,q3,whislo,whishi,n_fliers,flier_points_displayed,definition
+B,Top2All,6951,pearson,0.7588997817271464,0.6305729177639583,0.8410331775220805,0.3149049396950085,0.981927583959673,586,False,box=IQR; whiskers=furthest observed values within 1.5 IQR; all 6951 genes used
+B,GlobalMean,6951,pearson,-0.0735691932311297,-0.12018985732167665,-0.04308923694817785,-0.2357014995087729,-0.0005134735832986,336,False,box=IQR; whiskers=furthest observed values within 1.5 IQR; all 6951 genes used
+B,SameConditionMean,6951,pearson,0.9241917044710994,0.8536058696420569,0.9588962677646594,0.6967655698591554,0.999991572144826,718,False,box=IQR; whiskers=furthest observed values within 1.5 IQR; all 6951 genes used
+C,Top2All,6951,mae,0.2301986833870889,0.18900818360208754,0.2834831228982621,0.0670538454188851,0.4248462817431077,521,False,box=IQR; whiskers=furthest observed values within 1.5 IQR; all 6951 genes used
+C,GlobalMean,6951,mae,0.2970054799398303,0.25511240411023006,0.3495086644370796,0.1141352179334386,0.4907024193136893,568,False,box=IQR; whiskers=furthest observed values within 1.5 IQR; all 6951 genes used
+C,SameConditionMean,6951,mae,0.1018784047170579,0.07592872364339451,0.14406201866624063,0.0084285149102704,0.2460886611650134,598,False,box=IQR; whiskers=furthest observed values within 1.5 IQR; all 6951 genes used

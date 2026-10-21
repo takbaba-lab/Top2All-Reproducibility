@@ -1,0 +1,25 @@
+panel,method,seed_log1p,quartile,n_genes,metric,value,source_selector,source_column,operation,n_selected,display_x,representation
+A,Top2All,42,Q1,1738,pearson,0.723472261408509,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q1""}",pearson_median,cell,1,0,individual
+A,Top2All,42,Q2,1738,pearson,0.7858548621132514,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q2""}",pearson_median,cell,1,1,individual
+A,Top2All,42,Q3,1737,pearson,0.7883663619161473,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q3""}",pearson_median,cell,1,2,individual
+A,Top2All,42,Q4,1738,pearson,0.7200310885883474,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q4""}",pearson_median,cell,1,3,individual
+A,Top2All,43,Q1,1738,pearson,0.7319297644551218,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":43,""trueSD_quantile"":""Q1""}",pearson_median,cell,1,0,individual
+A,Top2All,43,Q2,1738,pearson,0.7896326303628991,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":43,""trueSD_quantile"":""Q2""}",pearson_median,cell,1,1,individual
+A,Top2All,43,Q3,1737,pearson,0.7931622780034123,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":43,""trueSD_quantile"":""Q3""}",pearson_median,cell,1,2,individual
+A,Top2All,43,Q4,1738,pearson,0.7275439795683288,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":43,""trueSD_quantile"":""Q4""}",pearson_median,cell,1,3,individual
+A,Top2All,44,Q1,1738,pearson,0.7114705140911868,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":44,""trueSD_quantile"":""Q1""}",pearson_median,cell,1,0,individual
+A,Top2All,44,Q2,1738,pearson,0.7639765698501213,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":44,""trueSD_quantile"":""Q2""}",pearson_median,cell,1,1,individual
+A,Top2All,44,Q3,1737,pearson,0.7693625069310984,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":44,""trueSD_quantile"":""Q3""}",pearson_median,cell,1,2,individual
+A,Top2All,44,Q4,1738,pearson,0.6875097191250359,"{""method"":""Top2All"",""mode"":""condition"",""seed_log1p"":44,""trueSD_quantile"":""Q4""}",pearson_median,cell,1,3,individual
+A,Top2All,3-seed median,Q1,1738,pearson,0.72347226140850895,"{""method"":""Top2All"",""mode"":""condition"",""trueSD_quantile"":""Q1""}",pearson_median,median,3,0,median
+A,Top2All,3-seed median,Q2,1738,pearson,0.7858548621132514,"{""method"":""Top2All"",""mode"":""condition"",""trueSD_quantile"":""Q2""}",pearson_median,median,3,1,median
+A,Top2All,3-seed median,Q3,1737,pearson,0.78836636191614728,"{""method"":""Top2All"",""mode"":""condition"",""trueSD_quantile"":""Q3""}",pearson_median,median,3,2,median
+A,Top2All,3-seed median,Q4,1738,pearson,0.72003108858834741,"{""method"":""Top2All"",""mode"":""condition"",""trueSD_quantile"":""Q4""}",pearson_median,median,3,3,median
+A,GlobalMean,42,Q1,1738,pearson,-0.0770347807057505,"{""method"":""GlobalMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q1""}",pearson_median,cell,1,0,GlobalMean
+A,GlobalMean,42,Q2,1738,pearson,-0.0686585561557501,"{""method"":""GlobalMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q2""}",pearson_median,cell,1,1,GlobalMean
+A,GlobalMean,42,Q3,1737,pearson,-0.0704344839770042,"{""method"":""GlobalMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q3""}",pearson_median,cell,1,2,GlobalMean
+A,GlobalMean,42,Q4,1738,pearson,-0.0818229736099221,"{""method"":""GlobalMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q4""}",pearson_median,cell,1,3,GlobalMean
+A,SameConditionMean,42,Q1,1738,pearson,0.910661254797582,"{""method"":""SameConditionMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q1""}",pearson_median,cell,1,0,SameConditionMean
+A,SameConditionMean,42,Q2,1738,pearson,0.93617648647622,"{""method"":""SameConditionMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q2""}",pearson_median,cell,1,1,SameConditionMean
+A,SameConditionMean,42,Q3,1737,pearson,0.9325505595110158,"{""method"":""SameConditionMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q3""}",pearson_median,cell,1,2,SameConditionMean
+A,SameConditionMean,42,Q4,1738,pearson,0.9093304797262338,"{""method"":""SameConditionMean"",""mode"":""condition"",""seed_log1p"":42,""trueSD_quantile"":""Q4""}",pearson_median,cell,1,3,SameConditionMean

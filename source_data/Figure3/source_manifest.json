@@ -1,0 +1,14 @@
+{
+  "files": [
+    {
+      "source": "fig3ab_condition_vs_nocond_3seeds.csv",
+      "copy": "fig3ab_condition_vs_nocond_3seeds.csv",
+      "sha256": "83224418bbf754b2d0e9ea2bbfb801adc3dc7a39166d0fd0acbbe03e9047e7d6"
+    },
+    {
+      "source": "fig3c_condition_fingerprint_knn.csv",
+      "copy": "fig3c_condition_fingerprint_knn.csv",
+      "sha256": "ef06ac0a099be1b1c9325f3b4898db1f8a5322f2a5de55907e5c18fd551184a8"
+    }
+  ]
+}

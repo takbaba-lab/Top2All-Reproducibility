@@ -1,0 +1,7 @@
+method,seed_log1p,seed_scale,samplewise_pearson,genewise_pearson,sample_summary_column,gene_summary_column
+seed42_1234,42,1234,0.9961562504394108,0.7917368574657585,pearson_median,pearson_median
+seed43_1235,43,1235,0.996134785295987,0.7518972161345728,pearson_median,pearson_median
+seed44_1236,44,1236,0.996124714846377,0.7832621342837901,pearson_median,pearson_median
+knn1,,,0.9948602124798605,0.9090954359573056,pearson_median,pearson_median
+knn3,,,0.9964138012318284,0.910268636282254,pearson_median,pearson_median
+knn5,,,0.9965618196592184,0.8848203989739134,pearson_median,pearson_median
