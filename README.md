@@ -85,9 +85,9 @@ Top2All-Reproducibility/
 
 Supplementary Figure S1 presents target-gene variability, S2 seed robustness and
 S3 input-depth sensitivity. Each figure directory includes a `registry_links.tsv`
-that connects plotted numerical cells to the result registry. Source identifiers
-and `true` field names in numerical tables are retained where required by the
-scientific schema; they denote measured expression, not a second measurement type.
+that connects plotted numerical cells to the result registry. Internal `true` field names in numerical tables are retained for schema compatibility
+and denote measured expression. Visible figure labels and metadata titles use
+measured/condition terminology, with technical true-variable terminology retained.
 
 ## Reproduce from GitHub alone
 
@@ -115,7 +115,9 @@ modified. Newly generated files may differ in timestamps or SVG identifiers; see
 GitHub alone supports figure regeneration, exact registry/source-table checks,
 fold inspection and re-summarizing the included numerical tables. It does not
 provide the complete curated expression matrix, pretrained encoder/dictionaries,
-trained checkpoints or per-sample prediction matrices. Full training, prediction,
+trained checkpoints or per-sample prediction matrices. All 24 nominal Top1000
+ranked inputs are included and match retained production hashes; one original
+Top100 input is also verified locally and proposed for the supplementary archive. Full training, prediction,
 metric evaluation from model outputs and raw-read processing need external assets.
 
 ## Reproduce with external assets
@@ -123,16 +125,24 @@ metric evaluation from model outputs and raw-read processing need external asset
 See [the reproduction guide](reproducibility/README.md) for model parameters,
 fold commands, evaluation layout and asset requirements.
 [EXTERNAL_ASSETS_REQUIRED.tsv](reproducibility/EXTERNAL_ASSETS_REQUIRED.tsv) records
-known asset identities and explicitly distinguishes recorded provenance hashes from
-files reopened locally. It is not a download manifest or a claim that those assets
+required asset identities, verified local inputs and unresolved dependencies,
+distinguishing recorded provenance hashes from files reopened locally. It is not a download manifest or a claim that those assets
 have already been archived. The missing exact raw-read-to-curated-matrix workflow
 and run-bound software lockfile are documented there and in the guide.
 
-[ZENODO_MANIFEST.tsv](reproducibility/ZENODO_MANIFEST.tsv) inventories final detailed
-numerical evaluations prepared locally for a future separate archive. They are not
-uploaded or included in GitHub. Raw RNA-seq remains at DDBJ. A future archive must
-first resolve missing assets and third-party redistribution terms; see
-[third-party resources](reproducibility/THIRD_PARTY.md).
+[ZENODO_MANIFEST.tsv](reproducibility/ZENODO_MANIFEST.tsv) is a proposed archive
+inventory with 1,020 records: **103 locally staged files (149,143,537 bytes)** and
+**917 desired project assets still missing**. The verified staging contains 66 final
+detailed evaluations, 24 original Top1000 lists, one original Top100 list, and
+metadata/manifests/checksums. These files are not uploaded to Zenodo. The complete
+24 curated full-expression inputs have not been located and are not described as
+available. See [the input search report](reproducibility/ASSET_SEARCH_REPORT.md).
+
+Third-party weights, dictionaries, software packages, Arial and DDBJ raw reads
+are external references only. Provider URLs, identities/hashes and unresolved terms
+are recorded in [THIRD_PARTY_RESOURCES.tsv](reproducibility/THIRD_PARTY_RESOURCES.tsv).
+The repository must remain private pending Takayoshi Yamashita's confirmation;
+no public visibility change, release, upload or DOI issuance is authorized.
 
 ## Citation and release status
 

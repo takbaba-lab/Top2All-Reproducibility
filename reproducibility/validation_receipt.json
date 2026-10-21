@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "registry_rows": 45543,
+  "source_reducers_replayed": 45543,
+  "figure_links_verified": 42157,
+  "final_exports": 24,
+  "folds_verified": true,
+  "path_secret_findings": 0,
+  "scope": "Numerical source and release integrity; training and inference require external assets.",
+  "numerical_preservation": {
+    "registry_rows_unchanged_excluding_figure_script_hashes": 45543,
+    "source_data_files_byte_unchanged": 91,
+    "model_and_evaluation_logic_unchanged": true
+  },
+  "figure_display": {
+    "figures": 8,
+    "manuscript_text_nodes_checked": 381,
+    "nontext_geometry": "unchanged"
+  },
+  "archive": {
+    "records": 1020,
+    "staged_files": 103,
+    "staged_bytes": 149143537,
+    "missing_project_assets": 917,
+    "local_bytes_verified": true
+  },
+  "plot_regeneration": {
+    "status": "PASS",
+    "binary_metadata_path_secret_findings": 0,
+    "regenerated_figures": 8,
+    "regenerated_plot_tables": 30,
+    "regenerated_numeric_cells_checked": 85664
+  },
+  "visibility_requirement": "PRIVATE until Takayoshi Yamashita confirms; no release/upload/DOI",
+  "date": "2026-10-21"
+}

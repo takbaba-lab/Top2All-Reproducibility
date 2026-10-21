@@ -15,7 +15,7 @@ S = ROOT / 'source_data/Figure5/numerical_sources'
 P = R / 'plot_data'
 Q = R / 'display_checks'
 for directory in (R, P, Q): directory.mkdir(parents=True, exist_ok=True)
-TITLE='Reference retrieval provides a stronger baseline than learned reconstruction in both unseen-condition and replicate-wise evaluations.'
+TITLE='Reference retrieval provides a stronger baseline than learned reconstruction for both unseen conditions and held-out replicates.'
 W=85;H=205;SEEDS=[42,43,44];SC=['#0072B2','#D55E00','#009E73']
 ENC={'Top2All':('#0072B2','o'),'kNN1':('#D55E00','s'),'kNN3':('#E69F00','^'),'kNN5':('#CC79A7','D'),'ZeroShift':('#555555','o')}
 YLIMS={'A':[.07,.52],'B_Pearson':[.27,.61],'B_MAE':[.05,.117],'C':[.72,.94],'D':[.09,.26]}

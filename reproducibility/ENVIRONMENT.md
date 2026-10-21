@@ -10,7 +10,9 @@ Arial must be installed separately and discoverable by Matplotlib for the origin
 figure typography. It is not redistributed. Output timestamps, PDF metadata and
 SVG element identifiers can differ between runs; compare numerical plot tables and
 rendered content, rather than expecting byte-identical newly generated exports.
-The committed exports are byte-identical to the selected final manuscript exports.
+The committed exports were regenerated from the selected final sources with
+manuscript-facing label/title corrections; scientific values and nontext geometry
+are preserved.
 
 `requirements-models.txt` records the core versions from a locally retained model
 environment export (PyTorch 2.6.0, Transformers 4.57.3, NumPy 2.4.0, pandas 2.3.3).
@@ -26,13 +28,12 @@ NumPy/PyTorch seeding and encoder training/evaluation modes are retained. Frozen
 encoder dropout is active during reconstruction-head training. Hardware and library
 changes may affect retrained numerical outputs even with the same seeds.
 
-Visual regeneration check: Figures 2–5 and S1–S3 reproduce the committed PNG pixels
-exactly in the retained figure environment. Figure1 recreates the same schematic
-content and dimensions, with some icon/text placement differences from the frozen
-export (0.89% of pixels differ); the supplied schematic source is therefore not a
-byte/pixel-exact layout recipe. The committed final Figure1 remains the reference
-for its exact design. This does not change sample partitions or numerical results.
-The original figure labels `true`/`True` mean measured expression, and `state`
-refers to transcriptomic/condition structure; these labels are retained in the
-selected final exports. README and biological-condition descriptions use the
-manuscript's condition terminology. No data or analysis alternatives are implied.
+Figure terminology was aligned to the final manuscript on 2026-10-21. All eight
+figures were regenerated with the retained figure environment. Nontext SVG drawing
+primitives, marker coordinates, paths and panel geometry match the pre-edit exports
+exactly, including Figure1. Only visible labels, manuscript-facing titles and
+normal export metadata changed. The previous Figure1 pixel discrepancy came from
+the older export's Matplotlib 3.10.8 text rendering versus the retained 3.11.2
+renderer; its nontext geometry is unchanged. Current exports now have a matching
+regeneration recipe. Numerical schemas may retain internal true/truth identifiers;
+those do not appear as inappropriate displayed measurement or condition labels.

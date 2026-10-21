@@ -76,7 +76,7 @@ def build():
  for ax in axs:
   for t in ax.texts:
    b=t.get_window_extent(renderer);assert b.x0>=0 and b.y0>=0 and b.x1<=f.bbox.width and b.y1<=f.bbox.height
- title='Figure 2 - Top2All working revision r1'
+ title='High sample-wise correlation overestimates reconstruction performance.'
  for ext in ['png','pdf','svg']:f.savefig(R/('Figure2.'+ext),dpi=600,metadata={'Title':title})
  write(P/'Panel_A_samplewise_Pearson.csv',ar);write(P/'Panel_B_genewise_Pearson.csv',br);write(P/'Panel_C_genewise_MAE.csv',cr);write(P/'Panel_D_strict_scatter.csv',dr);write(P/'boxplot_display_statistics.csv',stats)
  write(P/'median_display_statistics.csv',report)

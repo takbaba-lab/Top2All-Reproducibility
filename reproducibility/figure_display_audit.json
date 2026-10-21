@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "scope": "Display terminology changes only; SVG nontext primitive geometry and coordinates preserved for all eight figures.",
+  "figures": [
+    {
+      "figure": "Figure1",
+      "nontext_geometry_unchanged": true,
+      "drawn_primitives_before": 269,
+      "drawn_primitives_after": 269,
+      "geometry_sha256_before": "141d8209dc778a2c129fb57eca34f63efb74a623027d389b4ec17d536644d127",
+      "geometry_sha256_after": "141d8209dc778a2c129fb57eca34f63efb74a623027d389b4ec17d536644d127"
+    },
+    {
+      "figure": "Figure2",
+      "nontext_geometry_unchanged": true,
+      "drawn_primitives_before": 177,
+      "drawn_primitives_after": 177,
+      "geometry_sha256_before": "96c5bfe45b3c86c38f3e6a74939c3d0d0052c377b9e2c0846c635e8a923d4917",
+      "geometry_sha256_after": "96c5bfe45b3c86c38f3e6a74939c3d0d0052c377b9e2c0846c635e8a923d4917"
+    },
+    {
+      "figure": "Figure3",
+      "nontext_geometry_unchanged": true,
+      "drawn_primitives_before": 125,
+      "drawn_primitives_after": 125,
+      "geometry_sha256_before": "80fc898c2a0788456301c374e60a0f52db27598babd4370ae9be6106b317f201",
+      "geometry_sha256_after": "80fc898c2a0788456301c374e60a0f52db27598babd4370ae9be6106b317f201"
+    },
+    {
+      "figure": "Figure4",
+      "nontext_geometry_unchanged": true,
+      "drawn_primitives_before": 130,
+      "drawn_primitives_after": 130,
+      "geometry_sha256_before": "68eb4a3c74dcab74e5e393bce22332267262af8feaa808c199af4a871defde9d",
+      "geometry_sha256_after": "68eb4a3c74dcab74e5e393bce22332267262af8feaa808c199af4a871defde9d"
+    },
+    {
+      "figure": "Figure5",
+      "nontext_geometry_unchanged": true,
+      "drawn_primitives_before": 99,
+      "drawn_primitives_after": 99,
+      "geometry_sha256_before": "7f62c74ac54b3ee316eb486acb893ab75d0dd68428303adf51d3058613291726",
+      "geometry_sha256_after": "7f62c74ac54b3ee316eb486acb893ab75d0dd68428303adf51d3058613291726"
+    },
+    {
+      "figure": "FigureS1",
+      "nontext_geometry_unchanged": true,
+      "drawn_primitives_before": 101,
+      "drawn_primitives_after": 101,
+      "geometry_sha256_before": "512c9e70b34afb651710ceadc3b7eeaabc31213e4dd4510bff6b2775c55bc6ac",
+      "geometry_sha256_after": "512c9e70b34afb651710ceadc3b7eeaabc31213e4dd4510bff6b2775c55bc6ac"
+    },
+    {
+      "figure": "FigureS2",
+      "nontext_geometry_unchanged": true,
+      "drawn_primitives_before": 70,
+      "drawn_primitives_after": 70,
+      "geometry_sha256_before": "3d69a93b63b5b25bfc904fc4fb4ca3b27ffe047088ee34709a41f3eea65d1036",
+      "geometry_sha256_after": "3d69a93b63b5b25bfc904fc4fb4ca3b27ffe047088ee34709a41f3eea65d1036"
+    },
+    {
+      "figure": "FigureS3",
+      "nontext_geometry_unchanged": true,
+      "drawn_primitives_before": 169,
+      "drawn_primitives_after": 169,
+      "geometry_sha256_before": "f82db4283add53b05dc94b6498223dd585deab84a3cf676435c56dcf6c82bff3",
+      "geometry_sha256_after": "f82db4283add53b05dc94b6498223dd585deab84a3cf676435c56dcf6c82bff3"
+    }
+  ]
+}

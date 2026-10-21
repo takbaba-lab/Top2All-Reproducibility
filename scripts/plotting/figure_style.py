@@ -95,10 +95,13 @@ def save_all(fig, stem, dpi=600):
     fig.savefig(
         stem.with_suffix(".png"),
         dpi=dpi,
+        metadata={"Title": "Sparse-to-transcriptome reconstruction framework and evaluation design."},
     )
     fig.savefig(
         stem.with_suffix(".pdf"),
+        metadata={"Title": "Sparse-to-transcriptome reconstruction framework and evaluation design."},
     )
     fig.savefig(
         stem.with_suffix(".svg"),
+        metadata={"Title": "Sparse-to-transcriptome reconstruction framework and evaluation design."},
     )

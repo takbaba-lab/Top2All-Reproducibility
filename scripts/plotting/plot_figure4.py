@@ -15,7 +15,7 @@ S = ROOT / 'source_data/Figure4/numerical_sources'
 P = R / 'plot_data'
 Q = R / 'display_checks'
 for directory in (R, P, Q): directory.mkdir(parents=True, exist_ok=True)
-TITLE='Top2All captures condition-level structure but poorly reconstructs replicate-specific variation.'
+TITLE='Top2All captures condition-associated transcriptomic structure but poorly reconstructs replicate-specific variation.'
 SEEDS=[42,43,44];COLORS=['#0072B2','#D55E00','#009E73'];BLUE=COLORS[0];W=85;H=200
 YLIMS={'A':[.16,.58],'B':[.045,.100],'C':[-.045,.012],'D':[0,.12]}
 # Arial must be installed and discoverable by Matplotlib.
@@ -60,7 +60,7 @@ def main():
  for j,(mode,col,name,color) in enumerate([('no_condition','overall_baseline_mae','SameConditionMean',COLORS[2]),('no_condition','overall_top2all_mae','Top2All no condition',BLUE),('condition_aware','overall_top2all_mae','Top2All + condition',BLUE)]):
   y,raw=val('B',file,{'model_type':mode},col);dot('B',j,y,color,open=(j==1),size=30)
   tables['B'].append({'method':name,'model_type':mode,'metric':'true_expression_overall_mae','value':raw,'display_x':j})
- b.set_xlim(-.45,2.45);b.set_xticks([0,1,2],['Same-cond.\nmean','Top2All\nno cond.','Top2All\n+ cond.']);b.set_ylabel('True-expression\noverall MAE (log1p)');b.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.2f'));label('B','OOF prediction error')
+ b.set_xlim(-.45,2.45);b.set_xticks([0,1,2],['Same-cond.\nmean','Top2All\nno cond.','Top2All\n+ cond.']);b.set_ylabel('Measured-expression\noverall MAE (log1p)');b.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.2f'));label('B','OOF prediction error')
  file='fig4d_loco_residual_genewise_3seeds.csv';c=axes['C']
  for j,seed in enumerate(SEEDS):
   yy=[]
@@ -74,7 +74,7 @@ def main():
  for j,seed in enumerate(SEEDS):
   y,raw=val('D',file,{'seed':seed},'predicted_true_ratio');dot('D',j,y,COLORS[j],size=25)
   tables['D'].append({'seed':seed,'predicted_true_residual_sd_ratio':raw,'display_x':j})
- d.set_xlim(-.4,2.4);d.set_xticks(range(3),['42','43','44']);d.set_xlabel('Log1p-model seed');d.set_ylabel('Predicted / true\nresidual SD');label('D','LOCO residual amplitude')
+ d.set_xlim(-.4,2.4);d.set_xticks(range(3),['42','43','44']);d.set_xlabel('Log1p-model seed');d.set_ylabel('Predicted / measured\nresidual SD');label('D','LOCO residual amplitude')
  marker_checks=[];text_checks=[];line_checks=[]
  for dpi in [100,150,600]:
   f.set_dpi(dpi);f.canvas.draw();renderer=f.canvas.get_renderer()
@@ -107,6 +107,6 @@ def main():
  write(Q/'ylim_padding.csv',padding)
  f.set_dpi(100)
  for ext in ['png','pdf','svg']:f.savefig(R/f'Figure4.{ext}',dpi=600,metadata={'Title':TITLE})
- (Q/'layout.json').write_text(json.dumps({'title':TITLE,'dimensions_mm':[W,H],'ylims':YLIMS,'marker_clipping':0,'text_clipping':0,'line_clipping':0,'marker_tests':len(marker_checks),'text_tests':len(text_checks),'line_tests':len(line_checks),'checked_dpi':[100,150,600],'C_xlim':[-.25,1.25],'C_legend':'inside center; no residual-line overlap','A_sample_count_per_mode':24,'B_title':'OOF prediction error','B_metric':'overall true-expression prediction MAE (log1p), not residual MAE','D_scale':'ratio, no percent conversion'},indent=2))
+ (Q/'layout.json').write_text(json.dumps({'title':TITLE,'dimensions_mm':[W,H],'ylims':YLIMS,'marker_clipping':0,'text_clipping':0,'line_clipping':0,'marker_tests':len(marker_checks),'text_tests':len(text_checks),'line_tests':len(line_checks),'checked_dpi':[100,150,600],'C_xlim':[-.25,1.25],'C_legend':'inside center; no residual-line overlap','A_sample_count_per_mode':24,'B_title':'OOF prediction error','B_metric':'overall measured-expression prediction MAE (log1p), not residual MAE','D_scale':'ratio, no percent conversion'},indent=2))
  plt.close(f);print(json.dumps({'ylims':YLIMS,'marker_clipping':0,'text_clipping':0,'dimensions_mm':[W,H],'observations_and_medians':len(trace)},indent=2))
 if __name__=='__main__':main()

@@ -60,11 +60,15 @@ def main():
             assert sha(ROOT/row['figure_file']) == row['figure_sha256']
         if row['plotting_script']:
             assert sha(ROOT/row['plotting_script']) == row['plotting_script_sha256']
+    from audit_figure_display import validate_display
+    validate_display()
+    from audit_archive_assets import audit_archive
+    audit_archive()
     expected = {f'Figure{i}' for i in range(1,6)} | {'FigureS1','FigureS2','FigureS3'}
     figures = list((ROOT/'figures').iterdir())
     assert {p.name for p in figures} == {f'{fig}.{ext}' for fig in expected for ext in ('png','pdf','svg')}
     manifest = read(ROOT/'reproducibility/figure_manifest.tsv')
-    assert len(manifest) == 24 and all(sha(ROOT/r['path']) == r['sha256'] == r['source_export_sha256'] for r in manifest)
+    assert len(manifest) == 24 and all(sha(ROOT/r['path']) == r['sha256'] and len(r['source_export_sha256']) == 64 and r['change_type'] == 'display_terminology_only' for r in manifest)
     links = 0
     for fig in sorted(expected):
         for row in read(ROOT/'source_data'/fig/'registry_links.tsv'):
@@ -98,7 +102,7 @@ def main():
         if path.suffix.lower() in ('.png','.pdf'): continue
         text = path.read_text()
         if forbidden.search(text): findings.append(str(path.relative_to(ROOT)))
-        if path.name != 'validate_release.py':
+        if path.name not in ('validate_release.py', 'audit_figure_display.py'):
             assert not re.search(r'\bcanonical\b',text,re.I), path.relative_to(ROOT)
     assert not findings, findings
     verified = 0

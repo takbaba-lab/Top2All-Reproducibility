@@ -1,57 +1,55 @@
-# Paper-release audit
+# Prepublication correction and reaudit
 
-Date: 2026-10-21. Scope: a fresh release assembled from current local manuscript-facing
-materials. No historical GitHub repository was used as a source or modified.
+Date: 2026-10-21. Repository must remain private pending Takayoshi Yamashita's
+confirmation. No visibility change, release, Zenodo upload or DOI issuance is
+authorized. Historical private GitHub repositories/checkouts were not used.
 
 | Check | Result |
 |---|---|
-| Original final local validator | PASS; 27 read-only gates, all 45,543 source reductions |
-| Release registry | PASS; 45,543 unique result IDs and exact numerical reductions |
-| Figure/source links | PASS; 42,157 plotted cells resolve through release paths |
-| Figure set | PASS; only Figures 1–5 and S1–S3, 24 PNG/PDF/SVG exports |
-| Final export identity | PASS; committed exports match selected final local bytes |
-| Supplement numbering | S1 target variability; S2 seed robustness; S3 input depth |
-| Metadata/folds | PASS; 24 samples, eight conditions, three OOF/eight LOCO folds; no train/test overlap |
-| Scientific code preservation | PASS; 18 engine/evaluation programs retain computation structure, operators and numeric constants; shared preprocessing function is exact |
-| Numerical table preservation | PASS; 1,118,521 numeric cells checked before redundant unannotated intermediates were omitted |
-| Plot execution | PASS; eight figures execute from release sources |
-| Regenerated plot values | PASS; 30 tables and 85,664 numeric cells agree |
-| Visual reproduction | Figures 2–5/S1–S3 pixel-exact; Figure1 has a minor schematic layout discrepancy, documented in ENVIRONMENT.md |
-| Paths/secrets | PASS; text, SVG, PDF text/metadata and PNG metadata contain no detected private paths, machine usernames or credential signatures |
-| Release checksums | All release files except the checksum file itself are listed in checksums.sha256; validator verifies exact coverage |
-| Original scientific materials | Original selected figures and numerical source package remain unchanged |
-| Raw RNA-seq | Referenced at DDBJ DRA015952; not redistributed |
-| Git history | Fresh repository; no imported commits or private archive history |
+| Display terminology | Figure1 Condition shift; Figure3 condition fingerprint; Figure4 measured expression/residual SD; FigureS1 measured SD quartiles |
+| Metadata titles | Figures 1–5/S1–S3 use manuscript-facing titles; internal working-version descriptions removed |
+| Figure regeneration | Eight figures, all PNG/PDF/SVG regenerated |
+| Nontext geometry | All eight figures retain the exact pre-edit SVG drawing primitives/marker/path coordinates |
+| Figure text audit | 381 manuscript text nodes checked; no inappropriate measured/condition wording or internal release history |
+| Source tables | All 91 tracked source_data files remain byte-identical |
+| Registry scientific fields | All 45,543 rows unchanged; only figure/script hash fields rebound |
+| Source reductions / plot linkage | 45,543 exact reductions and 42,157 plotted numerical cell links verified |
+| Regenerated numerical tables | 30 plot tables / 85,664 numeric cells agree with unchanged sources |
+| Gene order, metadata and folds | Unchanged; three OOF/eight LOCO folds, no train/test overlap |
+| Model and scientific evaluation code | Unchanged; original seeds, preprocessing, metric formulas and model specifications preserved |
+| Release SHA-256 | Every tracked release file except the checksum file itself is covered and verified |
+| Local archive staging | 103 actual files, 149,143,537 bytes, all sizes/hashes verified |
+| Archive plan | 1,020 records, including 917 missing planned project assets; no availability claim for missing files |
+| Private paths/usernames/credentials | Text, SVG and image/PDF metadata scanned; no detected private path, machine username or credential signature |
 
-The code-structure comparison excludes docstrings, string labels/paths and the
-run-logging setup function; it retains executable numeric expressions and control
-flow. Model dictionary filenames are independently checked unchanged. The additional
-input-depth wrapper preserves the exact gene-metric computation while replacing
-production job-receipt discovery with explicit portable manifest/hash checks.
-It has not been executed on unavailable original predictions.
+`figure_display_audit.json` preserves before/after hashes of nontext SVG geometry;
+`audit_figure_display.py` recomputes the current fingerprint and checks displayed
+wording. Source schema identifiers remain compatible. Technical true-variable and
+upstream software Creator-version metadata are allowed; experiment groups use
+condition terminology. Internal dictionary filenames are external-resource
+identifiers, not alternative paper releases.
 
-## Limits that remain explicit
+`validate_release.py` includes numerical source/link checks, source/figure/script
+hashes, fold isolation, figure display geometry/terminology and archive inventory
+validation. `audit_archive_assets.py --require-local-staging` additionally verifies
+the actual ignored local archive bytes and archive checksum coverage. Neither
+validator changes scientific outputs or runs model training.
 
-Full model reproduction requires external assets: 24 curated expression profiles,
-120 additional ranked sensitivity lists, four encoder files, two dictionaries,
-174 final-epoch checkpoints and 576 prediction files. Sizes are unknown when bytes
-were unavailable. Recorded hashes are labeled as provenance-only, not freshly
-verified. The additional ranked lists have no hashes in the retained final manifest.
-A complete original training environment lockfile and a raw-read-to-curated-matrix
-workflow are missing. Model training/inference and complete prediction-based metric
-reevaluation were not rerun during packaging.
+The expanded asset search confirmed 24 exact Top1000 files and one exact Top100
+file. No exact curated full-expression profile, required final checkpoint or
+formal prediction bytes were found. An older full-input candidate has date-formatted
+gene symbols and a duplicate row; it was rejected without repair or substitution.
+All 192 input identities are now recorded, including original Top3000 and prepared
+Top2000 hashes. The first-2,000-row preparation contract was confirmed in retained
+code; missing file bytes prevent a new prefix comparison.
 
-The original final figures retain `true`/`True` labels for measured expression and
-some `state` labels for transcriptomic/condition structure. These terms are explained
-in the release documentation; biological-condition descriptions use manuscript
-terminology. Source schema fields remain unchanged. Figure1's small layout
-reproduction discrepancy does not affect numerical validation; the exact final
-schematic export is included.
+The prospective archive includes verified ranked inputs, detailed evaluations,
+metadata/folds/gene orders, identities and checksums. Third-party encoder weights,
+dictionaries, software, Arial and raw reads remain external references only.
+`THIRD_PARTY_RESOURCES.tsv` distinguishes known identity hashes and unresolved
+version/terms information. Project-asset redistribution awaits author review.
 
-The future supplementary archive manifest covers 66 locally verified detailed
-evaluation files, 147,916,292 bytes, excluded from GitHub. None has been uploaded to
-Zenodo. Missing model/input assets must be resolved before claiming a complete
-training/prediction archive, and third-party redistribution terms must be checked.
-
-The repository remains private pending author review and a separate, explicit
-visibility approval. No GitHub release, version tag or Zenodo deposit is created.
+Full training/prediction/reevaluation still requires original missing assets. A
+complete raw-read-to-curated-matrix workflow and run-bound original software lockfile
+are also unavailable. These limitations are not hidden by the successful figure/
+registry audit. No manuscript or Zenodo DOI is invented. CITATION.cff is unchanged.

@@ -119,45 +119,66 @@ summary/plot reproduction from the supplied final sources requires no prediction
 
 ## External asset and archive status
 
-`EXTERNAL_ASSETS_REQUIRED.tsv` records the final curated 24-sample expression files,
-encoder files/dictionaries, final-epoch checkpoint identities and prediction files.
-Its `sha256` values come from retained production provenance, not a new read of
-missing remote files. Unknown sizes are explicitly marked `unknown`. This list
-must be resolved against actual bytes before an archive is described as complete.
-No server paths, usernames or execution receipts are published.
+`EXTERNAL_ASSETS_REQUIRED.tsv` is an identity and availability inventory, not a
+claim that all files exist locally. Its 948 entries cover 24 curated full inputs,
+168 ranked inputs (24 samples at seven depths including original Top3000 and
+prepared Top2000), 174 final-epoch project checkpoints, 576 formal predictions,
+and six external encoder/dictionary files. Twenty-five ranked inputs are locally
+verified; other entries remain missing. Known SHA-256 values are retained even
+when bytes are unavailable, with an explicit provenance-only status.
 
-`ZENODO_MANIFEST.tsv` lists **66 locally verified final detailed evaluation files**
-(total 147,916,292 bytes), with intended archive paths, sizes and SHA-256 hashes.
-The preparation machine has ignored `.local/zenodo_assets/` files at each listed
-`local_source_path`. Those relative paths disclose no private filesystem details.
-The `.local/` files are administrative staging assets, not GitHub content; after a
-fresh clone the original preparer must provide them or fetch the future archive.
-No Zenodo upload or release has been made.
+The expanded search inspected 60,443 unique file paths and 3,365 members of 21
+local archives; 198 loose/member candidates were hashed. Historical private GitHub
+repositories/checkouts were excluded. It confirmed the 24 original Top1000 files
+and one Top100 file. The retained input identity evidence also supplies hashes for
+all other ranked input depths, replacing earlier unknown hash fields. No exact
+curated full-input or final checkpoint/prediction bytes were found. See
+`ASSET_SEARCH_REPORT.md` and `INPUT_ASSET_IDENTITY.tsv` for the accepted identities
+and why mismatched older candidates were rejected.
 
-Large/raw/intermediate data, training logs, internal audits and development history
-are excluded from GitHub. DDBJ DRA015952 remains the raw/source RNA-seq location.
-DDBJ alone is not the exact curated 24,410-gene matrix used by these programs: the
-complete read-processing/quantification and identifier-curation workflow is not
-contained in the final local release sources. Reconstructing that exact matrix
-requires author-supplied curated inputs or an independently documented preprocessing
-workflow. Original ranked sensitivity lists, pretrained assets, original predictions
-and checkpoints remain external dependencies. A complete original training lockfile
-is also unavailable; see `ENVIRONMENT.md`.
+The final Top2000 procedure reads the first 2,000 data rows of the existing
+Top3000 file, preserving header, Gene, Expression and rank order. This contract was
+verified against the retained preparation code; no fresh sorting or token refill
+is substituted. All Top3000 and prepared Top2000 bytes remain missing, so the
+file-level prefix relation cannot yet be independently rechecked.
 
-## Archiving an approved release
+`ZENODO_MANIFEST.tsv` has 1,020 records: **103 locally staged files totaling
+149,143,537 bytes** and **917 missing planned project assets**. Staging includes
+66 detailed per-gene evaluations; 25 provenance-matched ranked inputs; six metadata/
+fold/gene-order files; and six manifest, documentation and checksum files. Each
+row has asset type, relative local staging path, intended archive path, size,
+SHA-256, local status, redistribution-review status and description. Missing rows
+have empty local paths and unknown sizes; they are not available files.
 
-Review the private repository, license, external asset status and all audit results.
-After explicit author approval, make it public, enable its Zenodo integration, and
-create the GitHub `v1.0.0` release once the archive contents and terms are settled.
-Upload the approved supplementary assets using this manifest, rerun hashes, and add
-the issued DOI to `CITATION.cff`, README and manuscript data/code availability.
-No manuscript DOI should be inferred from the repository DOI.
+The ignored `.local/zenodo_assets/` directory contains the staged bytes on the
+preparation machine only. After a fresh clone, those files must come from the
+authors or a later archive. Its archive checksum file verifies all other staged
+members and excludes itself. No staged file or large new data asset was pushed
+to GitHub. Project-asset redistribution awaits author review.
+
+Third-party pretrained weights, dictionaries, packages, Arial and raw reads are
+not in the proposed deposit. `THIRD_PARTY_RESOURCES.tsv` records provider sources,
+version/identity, available hashes and unresolved terms; no redistribution right
+is inferred. DDBJ DRA015952 remains the raw/source RNA-seq reference.
+
+A complete raw-read-to-curated-matrix workflow and original run-bound software
+lockfile are also missing. DDBJ reads alone are not the exact curated CNN matrix.
+Model training/inference and complete metric reevaluation therefore remain blocked
+on external original assets. Figure/source-table reproduction is available.
+
+## Release hold
+
+Keep this repository private until Takayoshi Yamashita confirms the contents.
+No public visibility change, GitHub release, Zenodo upload or DOI issuance is
+currently authorized. After that review, resolve missing archive assets and
+third-party dependencies before claiming a complete reproduction archive. A future
+approved DOI can be added to citation metadata; no manuscript DOI is inferred.
 
 For input-depth reevaluation, `evaluate_input_depth.py` uses a portable TSV with
 `topn`, `seed_log1p`, `seed_scale`, `heldout_rep`, `sample_id`, `path` and `sha256`
 columns (432 prediction files across 54 fold jobs). Paths resolve relative to the
 TSV. The wrapper preserves the final numerical metric functions, fixed target
-sets, native hidden-gene calculation, truth tolerances and hidden-overwrite checks;
+sets, native hidden-gene calculation, measured-profile tolerances and hidden-overwrite checks;
 it replaces production job-receipt discovery with explicit manifest/hash checks.
 It has not been run on the unavailable full predictions during packaging:
 

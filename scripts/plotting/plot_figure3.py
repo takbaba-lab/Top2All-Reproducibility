@@ -69,7 +69,7 @@ def main():
   traces.append(dict(panel='C',source_file='fig3c_condition_fingerprint_knn.csv',source_selector=json.dumps(dict(k=k),sort_keys=True),source_column='same_condition_fraction',value=r['same_condition_fraction']))
  observed,=c.plot(kk,yy,'o-',color='#555555',lw=1,ms=6,label='Observed fraction');chance=c.axhline(.125,color='.65',ls='--',lw=.7,label='Chance = 1/8 = 0.125');c.set_xticks(kk);c.set_xlabel('Number of neighbors, k');c.set_ylabel('Same-condition\nfraction');c.set_ylim(0,1.12)
  clegend=c.legend(handles=[observed,chance],loc='upper right',frameon=False,fontsize=7.1,borderaxespad=.15,handlelength=1.8,handletextpad=.45,labelspacing=.3)
- for ax,panel,title in [(a,'A','Condition label effects'),(b[0],'B','Paired metric values'),(c,'C','Sparse-input state fingerprint')]:
+ for ax,panel,title in [(a,'A','Condition label effects'),(b[0],'B','Paired metric values'),(c,'C','Sparse-input condition fingerprint')]:
   ax.set_title(title,loc='left',pad=8);ax.text(-.28,1.08,panel,transform=ax.transAxes,fontweight='bold',fontsize=10,va='bottom')
  def audit(dpi):
   f.set_dpi(dpi);f.canvas.draw();renderer=f.canvas.get_renderer();out=[]

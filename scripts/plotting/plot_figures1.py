@@ -46,7 +46,7 @@ def main():
   for seed in SEEDS:draw(values('Top2All',seed=seed),'individual',seed)
   draw(values('Top2All',median=True),'median')
   for method in ['GlobalMean','SameConditionMean']:draw(values(method,seed=42),method)
-  ax.set_xticks(range(4),QUARTILES);ax.set_xlabel('Truth SD quartile (low → high)');ax.set_ylabel('Median gene-wise\nPearson r' if metric=='pearson' else 'Median gene-wise\nMAE (log1p)');ax.text(-.28,1.08,panel,transform=ax.transAxes,fontweight='bold',fontsize=10,va='bottom')
+  ax.set_xticks(range(4),QUARTILES);ax.set_xlabel('Measured SD quartile (low → high)');ax.set_ylabel('Median gene-wise\nPearson r' if metric=='pearson' else 'Median gene-wise\nMAE (log1p)');ax.text(-.28,1.08,panel,transform=ax.transAxes,fontweight='bold',fontsize=10,va='bottom')
   ax.set_yticks([-.1,0,.25,.50,.75,1.0] if panel=='A' else [.1,.2,.3,.4]);ax.yaxis.set_major_formatter(ticker.FormatStrFormatter('%.2f'))
  labels=['Top2All, individual seeds','Top2All, 3-seed median','Global mean','Same-condition mean'];handles=[]
  for kind,label in zip(['individual','median','GlobalMean','SameConditionMean'],labels):

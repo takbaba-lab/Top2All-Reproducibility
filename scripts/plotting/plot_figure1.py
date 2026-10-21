@@ -816,7 +816,7 @@ def draw_c(ax, clean=False):
 # Residual:
 #   replicate deviations from condition mean
 #
-# Unseen state:
+# Condition shift:
 #   true and predicted held-out condition shifts
 #   from the training/reference centroid
 # ============================================================
@@ -920,7 +920,7 @@ def draw_d(ax, clean=False):
         ("Sample-wise",  0.12, BLUE),
         ("Gene-wise",    0.36, BLUE),
         ("Residual",     0.60, BLUE),
-        ("Unseen state", 0.84, ORANGE),
+        ("Condition shift", 0.84, ORANGE),
     ]
 
     box_w = 0.17
