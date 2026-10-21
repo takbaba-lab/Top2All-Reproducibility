@@ -116,8 +116,9 @@ GitHub alone supports figure regeneration, exact registry/source-table checks,
 fold inspection and re-summarizing the included numerical tables. It does not
 provide the complete curated expression matrix, pretrained encoder/dictionaries,
 trained checkpoints or per-sample prediction matrices. All 24 nominal Top1000
-ranked inputs are included and match retained production hashes; one original
-Top100 input is also verified locally and proposed for the supplementary archive. Full training, prediction,
+ranked inputs are included and match retained production hashes. All 24 full profiles,
+168 ranked inputs and 576 formal predictions have now been recovered and verified
+in ignored local staging. Full training, prediction,
 metric evaluation from model outputs and raw-read processing need external assets.
 
 ## Reproduce with external assets
@@ -130,13 +131,14 @@ distinguishing recorded provenance hashes from files reopened locally. It is not
 have already been archived. The missing exact raw-read-to-curated-matrix workflow
 and run-bound software lockfile are documented there and in the guide.
 
-[ZENODO_MANIFEST.tsv](reproducibility/ZENODO_MANIFEST.tsv) is a proposed archive
-inventory with 1,020 records: **103 locally staged files (149,143,537 bytes)** and
-**917 desired project assets still missing**. The verified staging contains 66 final
-detailed evaluations, 24 original Top1000 lists, one original Top100 list, and
-metadata/manifests/checksums. These files are not uploaded to Zenodo. The complete
-24 curated full-expression inputs have not been located and are not described as
-available. See [the input search report](reproducibility/ASSET_SEARCH_REPORT.md).
+[ZENODO_MANIFEST.tsv](reproducibility/ZENODO_MANIFEST.tsv) retains 1,020 records:
+**846 locally staged files (848,696,315 bytes)** and **174 checkpoints not staged**.
+All expected production assets were located and SHA-256 verified on Genkai.
+Checkpoint transfer (23,885,006,370 bytes) awaits a storage decision. The staging
+contains all 24 curated full profiles, 168 ranked inputs, 576 formal predictions,
+66 detailed evaluations and metadata/manifests/checksums. Files have not been
+uploaded to Zenodo. See [the recovery report](reproducibility/GENKAI_RECOVERY_REPORT.md)
+and [verification records](reproducibility/GENKAI_ASSET_VERIFICATION.tsv).
 
 Third-party weights, dictionaries, software packages, Arial and DDBJ raw reads
 are external references only. Provider URLs, identities/hashes and unresolved terms

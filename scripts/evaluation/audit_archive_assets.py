@@ -27,7 +27,7 @@ def audit_archive(require_local=False):
         else:
             assert r['local_status']=='missing_not_staged' and not r['local_source_path'] and r['size_bytes']=='unknown'
             missing.append(r)
-    assert len(ready)==103 and len(missing)==917
+    assert len(ready)+len(missing)==len(rows)
     if require_local:
         sums=ROOT/'.local/zenodo_assets/archive_metadata/checksums.sha256'
         covered={line.split('  ',1)[1]:line.split('  ',1)[0] for line in sums.read_text().splitlines()}

@@ -1,5 +1,9 @@
 # Local exact-asset search
 
+Historical local-search snapshot, superseded for current availability by
+[Genkai recovery](GENKAI_RECOVERY_REPORT.md). All 948 expected assets were later
+located and hash-verified on Genkai; the counts below describe the earlier local search.
+
 Date: 2026-10-21. The search covered the current paper workspace, local analysis
 folders under Documents/Projects, Downloads, Desktop, local attachment/storage
 paths and temporary analysis archives. Historical private GitHub repositories and

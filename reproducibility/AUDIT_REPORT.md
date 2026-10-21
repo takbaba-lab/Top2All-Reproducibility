@@ -18,8 +18,8 @@ authorized. Historical private GitHub repositories/checkouts were not used.
 | Gene order, metadata and folds | Unchanged; three OOF/eight LOCO folds, no train/test overlap |
 | Model and scientific evaluation code | Unchanged; original seeds, preprocessing, metric formulas and model specifications preserved |
 | Release SHA-256 | Every tracked release file except the checksum file itself is covered and verified |
-| Local archive staging | 103 actual files, 149,143,537 bytes, all sizes/hashes verified |
-| Archive plan | 1,020 records, including 917 missing planned project assets; no availability claim for missing files |
+| Local archive staging | 846 actual files, 848,696,315 bytes, all sizes/hashes verified |
+| Archive plan | 1,020 records; all project originals located; 174 checkpoints not staged |
 | Private paths/usernames/credentials | Text, SVG and image/PDF metadata scanned; no detected private path, machine username or credential signature |
 
 `figure_display_audit.json` preserves before/after hashes of nontext SVG geometry;
@@ -35,21 +35,18 @@ validation. `audit_archive_assets.py --require-local-staging` additionally verif
 the actual ignored local archive bytes and archive checksum coverage. Neither
 validator changes scientific outputs or runs model training.
 
-The expanded asset search confirmed 24 exact Top1000 files and one exact Top100
-file. No exact curated full-expression profile, required final checkpoint or
-formal prediction bytes were found. An older full-input candidate has date-formatted
-gene symbols and a duplicate row; it was rejected without repair or substitution.
-All 192 input identities are now recorded, including original Top3000 and prepared
-Top2000 hashes. The first-2,000-row preparation contract was confirmed in retained
-code; missing file bytes prevent a new prefix comparison.
+The subsequent Genkai recovery located all 948 expected assets and verified each
+against its unchanged expected SHA-256. All 192 inputs and 576 formal predictions
+were locally reverified. All 24 production Top2000 files match Top3000 prefixes
+in paired values/order; their original CRLF versus LF line endings differ.
+The 174 checkpoints (23,885,006,370 bytes) remain verified on Genkai pending storage.
+Six third-party files remain external and were not staged. See
+`GENKAI_RECOVERY_REPORT.md` and `GENKAI_ASSET_VERIFICATION.tsv`.
 
-The prospective archive includes verified ranked inputs, detailed evaluations,
-metadata/folds/gene orders, identities and checksums. Third-party encoder weights,
-dictionaries, software, Arial and raw reads remain external references only.
-`THIRD_PARTY_RESOURCES.tsv` distinguishes known identity hashes and unresolved
-version/terms information. Project-asset redistribution awaits author review.
-
-Full training/prediction/reevaluation still requires original missing assets. A
-complete raw-read-to-curated-matrix workflow and run-bound original software lockfile
-are also unavailable. These limitations are not hidden by the successful figure/
-registry audit. No manuscript or Zenodo DOI is invented. CITATION.cff is unchanged.
+Only the archive audit's obsolete fixed 103/917 count assertion was changed with
+explicit user authorization; counts now derive from the manifest. Registry values,
+source tables, figures and scientific analysis logic remain byte-identical to the
+pre-recovery baseline. Original input/checkpoint/prediction identities are unchanged.
+Full training/inference was not rerun. Checkpoint transfer, author review, original
+software lockfile and raw-read-to-curated-matrix workflow remain unresolved.
+No release, archive upload or DOI issuance was performed.

@@ -10,7 +10,8 @@
   "numerical_preservation": {
     "registry_rows_unchanged_excluding_figure_script_hashes": 45543,
     "source_data_files_byte_unchanged": 91,
-    "model_and_evaluation_logic_unchanged": true
+    "model_and_evaluation_logic_unchanged": true,
+    "archive_audit_count_only_change": "Explicitly user-authorized; scientific analysis code unchanged"
   },
   "figure_display": {
     "figures": 8,
@@ -19,10 +20,12 @@
   },
   "archive": {
     "records": 1020,
-    "staged_files": 103,
-    "staged_bytes": 149143537,
-    "missing_project_assets": 917,
-    "local_bytes_verified": true
+    "staged_files": 846,
+    "staged_bytes": 848696315,
+    "missing_project_assets": 174,
+    "local_bytes_verified": true,
+    "remote_verified_checkpoints_not_staged": 174,
+    "unlocated_project_assets": 0
   },
   "plot_regeneration": {
     "status": "PASS",
@@ -32,5 +35,16 @@
     "regenerated_numeric_cells_checked": 85664
   },
   "visibility_requirement": "PRIVATE until Takayoshi Yamashita confirms; no release/upload/DOI",
-  "date": "2026-10-21"
+  "date": "2026-10-21",
+  "genkai_recovery": {
+    "expected_sha256_matches": 948,
+    "production_inputs_locally_verified": 192,
+    "formal_predictions_locally_verified": 576,
+    "formal_prediction_column": "raw_pred_wo_overwrite",
+    "production_top2000_prefix_pairs_verified": 24,
+    "prefix_line_ending_difference": "CRLF versus LF; original bytes retained",
+    "new_copied_files": 743,
+    "new_copied_bytes": 699356978,
+    "third_party_assets_verified_not_copied": 6
+  }
 }

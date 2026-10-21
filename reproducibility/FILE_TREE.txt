@@ -38,6 +38,8 @@ reproducibility/AUDIT_REPORT.md
 reproducibility/ENVIRONMENT.md
 reproducibility/EXTERNAL_ASSETS_REQUIRED.tsv
 reproducibility/FILE_TREE.txt
+reproducibility/GENKAI_ASSET_VERIFICATION.tsv
+reproducibility/GENKAI_RECOVERY_REPORT.md
 reproducibility/INPUT_ASSET_IDENTITY.tsv
 reproducibility/README.md
 reproducibility/THIRD_PARTY.md
