@@ -98,7 +98,7 @@ def main():
     # Prefix detection covers local and cluster filesystem roots without recording identities.
     forbidden = re.compile(r'/(?:Users|home|scratch|lustre|gpfs|System/Library)/|\b(?:gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|AKIA[A-Z0-9]{16})\b|-----BEGIN (?:RSA |OPENSSH |EC )?PRIVATE KEY-----',re.I)
     for path in ROOT.rglob('*'):
-        if not path.is_file() or any(x in path.parts for x in ('.git','.local','__pycache__')): continue
+        if not path.is_file() or path.name == '.DS_Store' or any(x in path.parts for x in ('.git','.local','__pycache__')): continue
         if path.suffix.lower() in ('.png','.pdf'): continue
         text = path.read_text()
         if forbidden.search(text): findings.append(str(path.relative_to(ROOT)))
@@ -111,10 +111,10 @@ def main():
             digest, file = line.split('  ',1)
             assert sha(ROOT/file)==digest, file
             verified += 1
-        actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob('*') if p.is_file() and not any(x in p.relative_to(ROOT).parts for x in ('.git','.local','__pycache__')) and str(p.relative_to(ROOT))!='reproducibility/checksums.sha256'}
+        actual = {str(p.relative_to(ROOT)) for p in ROOT.rglob('*') if p.is_file() and p.name != '.DS_Store' and not any(x in p.relative_to(ROOT).parts for x in ('.git','.local','__pycache__')) and str(p.relative_to(ROOT))!='reproducibility/checksums.sha256'}
         listed = {line.split('  ',1)[1] for line in (ROOT/'reproducibility/checksums.sha256').read_text().splitlines()}
         assert actual == listed, (actual-listed, listed-actual)
-    receipt = dict(status='PASS',registry_rows=len(registry),source_reducers_replayed=len(registry),figure_links_verified=links,final_exports=24,folds_verified=True,path_secret_findings=0,checksums_verified=verified,scope='Numerical source and release integrity; training and inference require external assets.')
+    receipt = dict(status='PASS',registry_rows=len(registry),source_reducers_replayed=len(registry),figure_links_verified=links,final_exports=24,folds_verified=True,path_secret_findings=0,checksums_verified=verified,scope='GitHub v1.0.0 numerical source, figure and core archive inventory integrity; external resource and original-environment limits are documented.')
     print(json.dumps(receipt,indent=2))
     if args.receipt: args.receipt.write_text(json.dumps(receipt,indent=2)+'\n')
 if __name__ == '__main__': main()

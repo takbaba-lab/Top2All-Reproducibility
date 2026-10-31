@@ -61,6 +61,8 @@ comparison; that limit is explicit. No alternative sorting/tie handling was adde
 The proposed manifest has 1,020 records: 103 existing staged files (149,143,537 bytes)
 and 917 missing planned project assets. It distinguishes physical availability,
 recorded hash identity and redistribution review. Third-party resources are tracked
-separately and excluded from deposit staging. The package remains incomplete for
-model training/prediction and full reevaluation until missing files are supplied.
-No archive has been uploaded and no DOI or release has been created.
+separately and excluded from deposit staging. This paragraph and its counts describe the early local-search snapshot only.
+Current v1.0.0 availability is 846 core members with all production identities
+resolved; see the reproduction guide and recovery report. Historical candidate
+rejection decisions and source hashes remain evidence, not present availability
+claims.

@@ -1,9 +1,9 @@
-# External resources and redistribution boundaries
+# Top2All v1.0.0 external resources and redistribution boundaries
 
 The project's MIT license covers original code and accompanying release
-documentation. It does not grant rights to external model resources or imply that
-project-data redistribution has already received author approval. Proposed project
-inputs, predictions, checkpoints and evaluations remain subject to author review.
+documentation. It does not grant rights to external model resources. The core archive contains
+project-origin inputs, predictions, evaluations and associated metadata. The 174
+project-trained checkpoints (~23.9 GB) are outside the core release scope.
 
 `THIRD_PARTY_RESOURCES.tsv` records 17 external resources with provider URL,
 version/identity, available SHA-256, hash-verification status and terms status.

@@ -6,7 +6,7 @@
   "final_exports": 24,
   "folds_verified": true,
   "path_secret_findings": 0,
-  "scope": "Numerical source and release integrity; training and inference require external assets.",
+  "scope": "GitHub v1.0.0 source/figure integrity and immutable core archive identity; original-environment limits documented.",
   "numerical_preservation": {
     "registry_rows_unchanged_excluding_figure_script_hashes": 45543,
     "source_data_files_byte_unchanged": 91,
@@ -22,10 +22,9 @@
     "records": 1020,
     "staged_files": 846,
     "staged_bytes": 848696315,
-    "missing_project_assets": 174,
     "local_bytes_verified": true,
-    "remote_verified_checkpoints_not_staged": 174,
-    "unlocated_project_assets": 0
+    "unlocated_project_assets": 0,
+    "excluded_project_checkpoints": 174
   },
   "plot_regeneration": {
     "status": "PASS",
@@ -34,8 +33,6 @@
     "regenerated_plot_tables": 30,
     "regenerated_numeric_cells_checked": 85664
   },
-  "visibility_requirement": "PRIVATE until Takayoshi Yamashita confirms; no release/upload/DOI",
-  "date": "2026-10-21",
   "genkai_recovery": {
     "expected_sha256_matches": 948,
     "production_inputs_locally_verified": 192,
@@ -46,5 +43,63 @@
     "new_copied_files": 743,
     "new_copied_bytes": 699356978,
     "third_party_assets_verified_not_copied": 6
+  },
+  "historical_evidence_date": "2026-10-21",
+  "date": "2026-11-01",
+  "release_identity": {
+    "tag": "v1.0.0",
+    "version": "1.0.0",
+    "date_released": "2026-11-01",
+    "doi": "10.5281/zenodo.23361275",
+    "doi_status": "reserved; publication controlled by deposit owner"
+  },
+  "release_scope": {
+    "github_public_release": "authorized",
+    "zenodo_publication": "deposit owner only",
+    "core_archive": "Top2All_Reproducibility_Core_v1.0.0.tar.gz",
+    "included_core_files": 846,
+    "core_uncompressed_bytes": 848696315,
+    "excluded_checkpoints": 174,
+    "excluded_checkpoint_bytes": 23885006370,
+    "unlocated_production_assets": 0
+  },
+  "release_finalization": {
+    "scientific_preservation_and_security": {
+      "status": "PASS",
+      "release_files_scanned": 186,
+      "pdf_files_text_metadata_checked": 8,
+      "png_metadata_checked": 8,
+      "findings": [],
+      "allowed_corresponding_author_email": "baba.takashi.547@m.kyushu-u.ac.jp",
+      "protected_scientific_files_unchanged": 160,
+      "manuscript_docx_unchanged": 10,
+      "figures_regenerated": false,
+      "scientific_data_modified": false
+    },
+    "core_archive_audit": {
+      "status": "PASS",
+      "archive_name": "Top2All_Reproducibility_Core_v1.0.0.tar.gz",
+      "sha256": "26446ed0b8bb8913ee745047855464cc53a112b468514160039fda69e280f4c3",
+      "compressed_size_bytes": 229189272,
+      "files": 846,
+      "uncompressed_bytes": 848696315,
+      "types": {
+        "manifest": 4,
+        "documentation": 1,
+        "checksum": 1,
+        "detailed_evaluation": 66,
+        "prediction": 576,
+        "curated_full_expression": 24,
+        "ranked_input": 168,
+        "metadata": 6
+      },
+      "all_member_hashes_match_manifest_and_local_staging": true,
+      "checkpoint_files": 0,
+      "third_party_binary_files": 0,
+      "private_path_secret_findings": []
+    },
+    "figures_regenerated": false,
+    "zenodo_ui_operated": false,
+    "manuscript_modified": false
   }
 }

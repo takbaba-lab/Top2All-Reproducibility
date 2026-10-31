@@ -1,4 +1,4 @@
-# Reproduction guide
+# Top2All v1.0.0 reproduction guide
 
 ## Included numerical evidence
 
@@ -118,53 +118,78 @@ modify the supplied final figures or registry. Per-gene reevaluation of input-de
 predictions also requires the fixed target identities in `metadata/`. Complete
 summary/plot reproduction from the supplied final sources requires no predictions.
 
-## External asset and archive status
+## Core archive and external dependencies
 
-`EXTERNAL_ASSETS_REQUIRED.tsv` records 948 expected production/dependency files.
-All 948 were located and SHA-256 verified on Genkai: 24 curated full profiles,
-168 ranked inputs, 174 final checkpoints, 576 formal predictions and six external
-encoder/dictionary files. All expected hashes were preserved. Full profiles,
-ranked inputs and formal predictions are also staged locally and rehashed.
-`GENKAI_ASSET_VERIFICATION.tsv` supplies portable verification records; see
-`GENKAI_RECOVERY_REPORT.md` for search scope, volumes and remaining limits.
+The v1.0.0 core archive is identified by Zenodo DOI
+[10.5281/zenodo.23361275](https://doi.org/10.5281/zenodo.23361275), reserved for
+publication by the deposit owner. The DOI may not resolve before owner publication.
+The fixed archive is `Top2All_Reproducibility_Core_v1.0.0.tar.gz`:
 
-All 24 production Top2000 originals were recovered. Their Gene/Expression strings
-and ranked order equal the first 2,000 data rows of the corresponding original
-Top3000 files. Top2000 uses CRLF and Top3000 LF, so raw byte prefixes differ;
-line-ending-normalized prefixes agree. Both original files match their independent
-expected hashes. No input was regenerated or rewritten.
+- SHA-256: `26446ed0b8bb8913ee745047855464cc53a112b468514160039fda69e280f4c3`.
+- Compressed bytes: 229,189,272.
+- Included: 846 files, 848,696,315 uncompressed file bytes.
+- Contents: 24 exact curated full profiles, 168 exact ranked inputs, 576 formal
+  predictions, 66 detailed evaluations, six metadata files and six manifest,
+  documentation and checksum files.
+- Excluded: all 174 project-trained checkpoints (23,885,006,370 bytes, ~23.9 GB),
+  third-party weights/dictionaries/software/fonts and raw reads.
 
-`ZENODO_MANIFEST.tsv` has 1,020 records: **846 locally staged files totaling
-848,696,315 bytes** and **174 checkpoints not staged**. Staging includes 24 full
-profiles, 168 ranked inputs, 576 formal predictions, 66 detailed evaluations, six
-metadata files and six manifest/documentation/checksum files. All 576 prediction
-files contain the formal `raw_pred_wo_overwrite` column and 24,410 unique gene rows.
-Checkpoint originals total 23,885,006,370 bytes; local transfer awaits a storage
-decision. Their rows have no local path and distinguish verified remote size from
-unknown local size. They are located originals, not missing identities.
+The 174 project-trained checkpoints are not included in the core archive and may
+be distributed separately if needed. Their exact originals were located and
+SHA-256 verified; they are not missing identities. Retraining from the curated
+inputs uses the released code and separately obtained third-party model resources.
+Evaluation of saved formal predictions does not require those trained checkpoints.
 
-Ignored `.local/zenodo_assets/` contains the verified bytes on the preparation
-machine only. A fresh clone requires those files from the authors or a later
-approved archive. Its checksum file covers all staged members except itself.
-Third-party encoder/dictionaries were verified externally and were not copied or
-staged. `THIRD_PARTY_RESOURCES.tsv` records sizes, hashes, provider identities and
-unresolved terms without private paths. No redistribution right is inferred.
-No archive has been uploaded; project redistribution awaits author review.
+`ZENODO_MANIFEST.tsv` retains 1,020 identity records: 846 included core members and
+174 explicitly excluded project checkpoints. It records original hashes, verified
+sizes, archive paths and release scope. `EXTERNAL_ASSETS_REQUIRED.tsv` records 948
+production/dependency identities: all were located and hash-verified, comprising
+192 inputs, 174 checkpoints, 576 predictions and six external encoder/dictionary
+files. `GENKAI_ASSET_VERIFICATION.tsv` preserves portable expected/observed hash
+records; the recovery report describes verification rather than a new analysis.
 
-The exact raw-read-to-curated-matrix workflow and original run-bound software
-lockfile remain unavailable. DDBJ DRA015952 is the raw/source RNA-seq reference;
-raw reads alone are not the exact curated matrix. Training/inference still requires
-checkpoint transfer or training and separately obtained third-party dependencies.
-Figure/source-table reproduction is available. Recovery verifies provenance and
-file structure; it does not claim a rerun of the scientific analyses.
+All 24 production Top2000 files preserve the first 2,000 Top3000 data rows in
+header, paired Gene/Expression strings and rank order. Their original CRLF versus
+LF serialization differs; line-ending-normalized prefixes agree. Both original
+serializations match their independent provenance hashes. No input was regenerated.
+All 576 formal prediction files contain 24,410 unique gene rows and the formal
+`raw_pred_wo_overwrite` column. Other retained output columns must not replace it.
 
-## Release hold
+The manifest's `.local/zenodo_assets/` locators describe the preparation machine,
+not files included in a fresh GitHub clone. After downloading and unpacking the
+core archive, use `intended_archive_path` relative to
+`Top2All_Reproducibility_Core_v1.0.0/` to locate a member. For example, pass its
+`inputs/full/` and `inputs/topN/` directories to the CLI examples above, or copy
+inputs to the ignored `external_assets/` layout. Prediction manifests should use
+paths relative to the prediction manifest itself, as described below.
 
-Keep this repository private until Takayoshi Yamashita confirms the contents.
-No public visibility change, GitHub release, Zenodo upload or DOI issuance is
-currently authorized. After that review, resolve missing archive assets and
-third-party dependencies before claiming a complete reproduction archive. A future
-approved DOI can be added to citation metadata; no manuscript DOI is inferred.
+Verify the compressed archive with its companion `.sha256` file. Then, from the
+unpacked archive root, verify `archive_metadata/checksums.sha256`; that internal
+list covers 845 members and excludes itself. All 846 member hashes, including
+the checksum file, were independently compared with the release manifest. The
+[archive identity record](CORE_ARCHIVE.json) fixes the compressed hash and size.
+
+The archive is immutable. Its `archive_metadata/README.md` and manifest copies
+are historical preparation snapshots retained byte-for-byte for provenance.
+Administrative availability, review or publication wording in those snapshots is
+superseded by the current v1.0.0 GitHub documentation; source identities and
+checksums remain unchanged. The [companion Zenodo README](ZENODO_README.md)
+describes the current release scope without rewriting the frozen archive.
+
+## Reproducibility limits
+
+The original raw-read-to-curated-matrix workflow and original run-bound complete
+software lockfile remain unavailable. DDBJ DRA015952 is the raw/source sequencing
+reference; raw reads alone do not specify the exact curated CNN matrix. The core
+archive supplies that exact matrix and the formal predictions, supporting
+prediction-based evaluation. Full retraining additionally needs external pretrained
+resources and an appropriate hardware/software environment. A byte-identity audit
+is not a claim that training, inference or all scientific evaluations were rerun.
+
+`THIRD_PARTY_RESOURCES.tsv` records provider identities, versions/hashes and terms
+information. Those resources remain external only; matching hashes do not establish
+redistribution rights. Original third-party versions/terms remain unresolved where
+not recorded, and no third-party resource is included in the core archive.
 
 For input-depth reevaluation, `evaluate_input_depth.py` uses a portable TSV with
 `topn`, `seed_log1p`, `seed_scale`, `heldout_rep`, `sample_id`, `path` and `sha256`
@@ -172,7 +197,7 @@ columns (432 prediction files across 54 fold jobs). Paths resolve relative to th
 TSV. The wrapper preserves the final numerical metric functions, fixed target
 sets, native hidden-gene calculation, measured-profile tolerances and hidden-overwrite checks;
 it replaces production job-receipt discovery with explicit manifest/hash checks.
-The wrapper has not been rerun on the recovered predictions during this provenance-only recovery:
+The wrapper has not been rerun on the recovered predictions as part of release finalization:
 
 ```bash
 python scripts/evaluation/evaluate_input_depth.py \

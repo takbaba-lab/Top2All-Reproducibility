@@ -1,0 +1,31 @@
+{
+  "status": "PASS",
+  "archive_name": "Top2All_Reproducibility_Core_v1.0.0.tar.gz",
+  "sha256": "26446ed0b8bb8913ee745047855464cc53a112b468514160039fda69e280f4c3",
+  "compressed_size_bytes": 229189272,
+  "files": 846,
+  "uncompressed_bytes": 848696315,
+  "types": {
+    "manifest": 4,
+    "documentation": 1,
+    "checksum": 1,
+    "detailed_evaluation": 66,
+    "prediction": 576,
+    "curated_full_expression": 24,
+    "ranked_input": 168,
+    "metadata": 6
+  },
+  "all_member_hashes_match_manifest_and_local_staging": true,
+  "checkpoint_files": 0,
+  "third_party_binary_files": 0,
+  "private_path_secret_findings": [],
+  "version": "1.0.0",
+  "tag": "v1.0.0",
+  "date_released": "2026-11-01",
+  "zenodo_doi": "10.5281/zenodo.23361275",
+  "doi_status": "reserved; publication controlled by the deposit owner",
+  "archive_root": "Top2All_Reproducibility_Core_v1.0.0",
+  "checkpoint_exclusion_count": 174,
+  "checkpoint_exclusion_bytes": 23885006370,
+  "archive_snapshot_policy": "Core member bytes, including historical preparation metadata, are immutable. Current GitHub release documentation supersedes snapshot availability/publication wording only."
+}

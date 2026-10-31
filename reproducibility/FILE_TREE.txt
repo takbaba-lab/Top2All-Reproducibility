@@ -3,6 +3,7 @@ CITATION.cff
 LICENSE
 README.md
 docs/FIGURE_LEGENDS.md
+docs/RELEASE_NOTES_v1.0.0.md
 figures/Figure1.pdf
 figures/Figure1.png
 figures/Figure1.svg
@@ -35,6 +36,7 @@ metadata/oof_folds.csv
 metadata/sample_metadata.csv
 reproducibility/ASSET_SEARCH_REPORT.md
 reproducibility/AUDIT_REPORT.md
+reproducibility/CORE_ARCHIVE.json
 reproducibility/ENVIRONMENT.md
 reproducibility/EXTERNAL_ASSETS_REQUIRED.tsv
 reproducibility/FILE_TREE.txt
@@ -45,6 +47,7 @@ reproducibility/README.md
 reproducibility/THIRD_PARTY.md
 reproducibility/THIRD_PARTY_RESOURCES.tsv
 reproducibility/ZENODO_MANIFEST.tsv
+reproducibility/ZENODO_README.md
 reproducibility/checksums.sha256
 reproducibility/figure_display_audit.json
 reproducibility/figure_manifest.tsv

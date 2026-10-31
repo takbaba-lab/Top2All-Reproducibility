@@ -1,4 +1,4 @@
-# Computational environments
+# Top2All v1.0.0 computational environments
 
 Figure/source-table validation was exercised with Python 3.12, Matplotlib 3.11.2,
 NumPy 2.5.4, pandas 2.2.3, pypdf 6.10.0, and Pillow 13.0.0. The figure dependencies
@@ -20,8 +20,9 @@ Use a separate environment for model training. The retained export listed CUDA
 12.4 packages, but there is no complete lockfile cryptographically bound to every
 final training run. Those versions are a reference, not a claim of an exact
 historical environment for all runs. Model execution was not repeated during
-release packaging because encoder assets and complete input profiles/checkpoints
-were not available in this local release workspace.
+release finalization. Exact curated inputs and formal predictions are included in
+the core archive. Project-trained checkpoints are excluded from that archive by
+scope, and pretrained encoder/dictionary resources remain external dependencies.
 
 The reconstruction/scale seed pairs are 42/1234, 43/1235 and 44/1236. Original
 NumPy/PyTorch seeding and encoder training/evaluation modes are retained. Frozen

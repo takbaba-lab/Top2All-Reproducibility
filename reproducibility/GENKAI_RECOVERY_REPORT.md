@@ -3,8 +3,9 @@
 Date: 2026-10-21. All 948 expected identities from the pre-search external-asset
 inventory were located and SHA-256 verified on Genkai. Expected hashes were never
 changed. Historical private GitHub repositories and their checkouts were not used.
-The repository remains private pending Takayoshi Yamashita's confirmation. No
-visibility change, release, tag, Zenodo upload or DOI issuance was performed.
+This is the historical recovery record. Current availability, DOI and publication
+scope are defined by the v1.0.0 release documentation; original identity/hash
+evidence in this report is retained.
 
 | Asset | Located | Expected SHA-256 matched | Locally staged |
 |---|---:|---:|---:|
@@ -71,7 +72,8 @@ No project data or checkpoint bytes were added to GitHub.
 
 The 174 checkpoints total 23,885,006,370 bytes. They remain on Genkai because the
 preparation machine had approximately 16.6 GB available before prediction transfer.
-Transfer requires a user decision on additional storage or another staging target.
+For v1.0.0, these 174 verified checkpoints are explicitly excluded from the core
+archive and may be distributed separately if needed.
 The six third-party files were not copied or staged. Their original upstream
 revision and redistribution terms remain unresolved where previously unrecorded;
 matching bytes do not establish a redistribution right.
@@ -84,8 +86,9 @@ checksum list were refreshed; external resources remain outside the deposit.
 
 ## Remaining limits and verification
 
-Checkpoint transfer and author review remain pending. The exact raw-read-to-curated
-matrix workflow and original run-bound software lockfile remain unavailable.
+Checkpoint exclusion is a release-scope decision, not an unlocated-asset condition.
+The exact raw-read-to-curated-matrix workflow and original run-bound complete
+software lockfile remain unavailable.
 This recovery did not rerun training, inference or scientific evaluation.
 Scientific source tables, registry values, figures and analysis logic are unchanged.
 The only script change is the user-approved archive count check: counts now follow

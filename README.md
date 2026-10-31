@@ -1,4 +1,4 @@
-# Top2All reproducibility repository
+# Top2All — v1.0.0
 
 **Top2All: Benchmarking sparse-to-transcriptome reconstruction from high-expression profiles across sex- and sex-steroid-defined conditions**
 
@@ -7,15 +7,21 @@ Corresponding author: Takashi Baba ([email](mailto:baba.takashi.547@m.kyushu-u.a
 
 Top2All reconstructs transcriptome-wide expression from sample-specific sparse
 high-expression inputs using a frozen Mouse-Geneformer encoder, an expression
-reconstruction module and a sample-wise scale module. This repository accompanies
-the manuscript and provides final figures, numerical source tables, code, sample
-partitions and checks needed to inspect the benchmark.
+reconstruction module and a sample-wise scale module. This is the manuscript-associated reproducibility repository. It provides the
+training, prediction, evaluation and plotting code, final figures, compact numerical
+source tables, sample partitions and provenance-linked registry for the benchmark.
 
 The study uses **24 mouse adrenal zona fasciculata cell-number-normalized (CNN)
 RNA-seq samples across eight sex- and sex-steroid-defined conditions**, with three
 biological replicates per condition. Raw/source RNA-seq data used in the paper are
 available from **DDBJ accession [DRA015952](https://ddbj.nig.ac.jp/resource/sra-submission/DRA015952)**.
 Raw reads are not duplicated here.
+
+**Release:** v1.0.0 (2026-11-01). **Zenodo core DOI:**
+[10.5281/zenodo.23361275](https://doi.org/10.5281/zenodo.23361275).
+This DOI is reserved for the core archive; it may not resolve until the deposit
+owner publishes it. Zenodo publication is managed by the authors separately from
+the GitHub release.
 
 ## Benchmark design
 
@@ -112,43 +118,49 @@ The output directory must be new. Committed figures and numerical sources are no
 modified. Newly generated files may differ in timestamps or SVG identifiers; see
 [environment details](reproducibility/ENVIRONMENT.md).
 
-GitHub alone supports figure regeneration, exact registry/source-table checks,
-fold inspection and re-summarizing the included numerical tables. It does not
-provide the complete curated expression matrix, pretrained encoder/dictionaries,
-trained checkpoints or per-sample prediction matrices. All 24 nominal Top1000
-ranked inputs are included and match retained production hashes. All 24 full profiles,
-168 ranked inputs and 576 formal predictions have now been recovered and verified
-in ignored local staging. Full training, prediction,
-metric evaluation from model outputs and raw-read processing need external assets.
+## Data and code locations
 
-## Reproduce with external assets
+| Location | Release contents |
+|---|---|
+| GitHub v1.0.0 | Source code, plotting scripts, compact numerical source tables, metadata, validation folds, figures, registry and reproducibility documentation |
+| Zenodo core archive | Exact curated 24-sample full-expression inputs, 168 ranked TopN inputs, 576 formal prediction files, 66 detailed evaluation files, metadata/folds/gene order, provenance manifests and checksums |
+| DDBJ DRA015952 | Raw/source sequencing data; no raw reads are duplicated here |
+| Original third-party providers | Mouse-Geneformer pretrained resources and dictionaries, software packages and Arial; external only |
+
+GitHub alone supports figure regeneration, registry/source-table validation,
+partition inspection and re-summarizing the included numerical tables. The
+[Zenodo core archive](https://doi.org/10.5281/zenodo.23361275) supplies the exact
+curated inputs and formal predictions required for prediction-based reevaluation.
+Its filename is `Top2All_Reproducibility_Core_v1.0.0.tar.gz`; it contains 846 files
+with 848,696,315 uncompressed file bytes. See [archive identity and verification](reproducibility/CORE_ARCHIVE.json).
+
+All 24 full-expression profiles, 168 ranked inputs and 576 predictions match their
+production provenance hashes. The archive preserves original file bytes and rank
+order. Evaluation uses `raw_pred_wo_overwrite` before observed-gene replacement.
+
+The 174 project-trained checkpoints (~23.9 GB) are not included in the core archive
+and may be distributed separately if needed. They are verified production assets,
+not missing identities. Retraining from the included inputs requires separately
+obtained Mouse-Geneformer resources and a suitable model environment.
 
 See [the reproduction guide](reproducibility/README.md) for model parameters,
-fold commands, evaluation layout and asset requirements.
+fold commands, evaluation layout and archive use. [ZENODO_MANIFEST.tsv](reproducibility/ZENODO_MANIFEST.tsv)
+contains the 846 included members plus 174 explicitly excluded checkpoints.
 [EXTERNAL_ASSETS_REQUIRED.tsv](reproducibility/EXTERNAL_ASSETS_REQUIRED.tsv) records
-required asset identities, verified local inputs and unresolved dependencies,
-distinguishing recorded provenance hashes from files reopened locally. It is not a download manifest or a claim that those assets
-have already been archived. The missing exact raw-read-to-curated-matrix workflow
-and run-bound software lockfile are documented there and in the guide.
+asset identities, inclusion scope and external dependencies. [THIRD_PARTY_RESOURCES.tsv](reproducibility/THIRD_PARTY_RESOURCES.tsv)
+records provider URLs, versions/identities, hashes and terms information without
+redistributing third-party files.
 
-[ZENODO_MANIFEST.tsv](reproducibility/ZENODO_MANIFEST.tsv) retains 1,020 records:
-**846 locally staged files (848,696,315 bytes)** and **174 checkpoints not staged**.
-All expected production assets were located and SHA-256 verified on Genkai.
-Checkpoint transfer (23,885,006,370 bytes) awaits a storage decision. The staging
-contains all 24 curated full profiles, 168 ranked inputs, 576 formal predictions,
-66 detailed evaluations and metadata/manifests/checksums. Files have not been
-uploaded to Zenodo. See [the recovery report](reproducibility/GENKAI_RECOVERY_REPORT.md)
-and [verification records](reproducibility/GENKAI_ASSET_VERIFICATION.tsv).
+The original raw-read-to-curated-matrix workflow and original run-bound complete
+software lockfile are unavailable. The core archive therefore supports analysis
+from the exact curated inputs and saved predictions; it is not a self-contained
+raw-read processing or original training environment. Recovery and release checks
+verify identities and numerical source consistency, not a new model-training run.
 
-Third-party weights, dictionaries, software packages, Arial and DDBJ raw reads
-are external references only. Provider URLs, identities/hashes and unresolved terms
-are recorded in [THIRD_PARTY_RESOURCES.tsv](reproducibility/THIRD_PARTY_RESOURCES.tsv).
-The repository must remain private pending Takayoshi Yamashita's confirmation;
-no public visibility change, release, upload or DOI issuance is authorized.
+## Citation and license
 
-## Citation and release status
-
-Use `CITATION.cff` for the author order and manuscript title. No manuscript DOI or
-Zenodo DOI has been assigned in this repository. A Zenodo DOI can be added after
-archiving the approved release. The original project code and accompanying release
-documentation use the MIT license; external resources retain their own terms.
+Use `CITATION.cff` for the repository DOI, v1.0.0 version, release date and author
+order. The Zenodo DOI identifies the core reproducibility archive; it is not a
+manuscript DOI. The original project code and accompanying release documentation
+use the MIT license. Data and third-party resources retain their applicable terms;
+see [resource boundaries](reproducibility/THIRD_PARTY.md).

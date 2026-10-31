@@ -1,52 +1,61 @@
-# Prepublication correction and reaudit
+# Top2All v1.0.0 release audit
 
-Date: 2026-10-21. Repository must remain private pending Takayoshi Yamashita's
-confirmation. No visibility change, release, Zenodo upload or DOI issuance is
-authorized. Historical private GitHub repositories/checkouts were not used.
+Release date: 2026-11-01. Core archive DOI:
+[10.5281/zenodo.23361275](https://doi.org/10.5281/zenodo.23361275), reserved for
+publication by the deposit owner. This audit finalizes GitHub release metadata and
+scope; it does not publish or replace Zenodo files.
 
 | Check | Result |
 |---|---|
-| Display terminology | Figure1 Condition shift; Figure3 condition fingerprint; Figure4 measured expression/residual SD; FigureS1 measured SD quartiles |
-| Metadata titles | Figures 1–5/S1–S3 use manuscript-facing titles; internal working-version descriptions removed |
-| Figure regeneration | Eight figures, all PNG/PDF/SVG regenerated |
-| Nontext geometry | All eight figures retain the exact pre-edit SVG drawing primitives/marker/path coordinates |
-| Figure text audit | 381 manuscript text nodes checked; no inappropriate measured/condition wording or internal release history |
-| Source tables | All 91 tracked source_data files remain byte-identical |
-| Registry scientific fields | All 45,543 rows unchanged; only figure/script hash fields rebound |
-| Source reductions / plot linkage | 45,543 exact reductions and 42,157 plotted numerical cell links verified |
-| Regenerated numerical tables | 30 plot tables / 85,664 numeric cells agree with unchanged sources |
-| Gene order, metadata and folds | Unchanged; three OOF/eight LOCO folds, no train/test overlap |
-| Model and scientific evaluation code | Unchanged; original seeds, preprocessing, metric formulas and model specifications preserved |
-| Release SHA-256 | Every tracked release file except the checksum file itself is covered and verified |
-| Local archive staging | 846 actual files, 848,696,315 bytes, all sizes/hashes verified |
-| Archive plan | 1,020 records; all project originals located; 174 checkpoints not staged |
-| Private paths/usernames/credentials | Text, SVG and image/PDF metadata scanned; no detected private path, machine username or credential signature |
+| Release identity | v1.0.0; CFF version 1.0.0, DOI and 2026-11-01 release date |
+| Registry/source reductions | PASS; 45,543 exact source reductions |
+| Figure-registry linkage | PASS; 42,157 plotted numerical cell links |
+| Figure set | Figures 1–5 and S1–S3, 24 exports; no regeneration or byte changes |
+| Scientific file preservation | 160 protected files unchanged from the pre-release main commit |
+| Source data/registry/model code | No source values, registry fields, analysis code or model specifications changed |
+| Metadata/folds/seeds | Unchanged; three OOF/eight LOCO folds, no train/test overlap |
+| Manuscript | Ten local manuscript DOCX files unchanged; no manuscript edit |
+| Security/privacy | No detected local/HPC paths, machine usernames, credential signatures, internal instruction files or disallowed emails in release files; image/PDF metadata included |
+| Core archive identity | SHA-256 matches 26446ed0b8bb8913ee745047855464cc53a112b468514160039fda69e280f4c3 |
+| Core members | 846 files, 848,696,315 uncompressed bytes; every member hash matches the manifest and preserved local bytes |
+| Checkpoint scope | 174 verified production checkpoints (~23.9 GB) explicitly excluded from core; optional separate distribution |
+| Third-party scope | Pretrained weights/dictionaries, packages, fonts and raw reads excluded |
+| Core privacy | No detected private filesystem paths, machine identities or credential signatures in archive member content |
+| SHA-256 coverage | All release files except the checksum file itself listed and verified |
 
-`figure_display_audit.json` preserves before/after hashes of nontext SVG geometry;
-`audit_figure_display.py` recomputes the current fingerprint and checks displayed
-wording. Source schema identifiers remain compatible. Technical true-variable and
-upstream software Creator-version metadata are allowed; experiment groups use
-condition terminology. Internal dictionary filenames are external-resource
-identifiers, not alternative paper releases.
+The immutable archive is `Top2All_Reproducibility_Core_v1.0.0.tar.gz`
+(229,189,272 compressed bytes). Its included assets comprise 24 curated full
+profiles, 168 ranked inputs, 576 formal predictions, 66 detailed evaluations and
+12 metadata/provenance/documentation/checksum files. `CORE_ARCHIVE.json` fixes its
+identity and scope. `ZENODO_MANIFEST.tsv` retains all 1,020 identities while
+separating 846 included members from 174 excluded checkpoints; none is labeled
+as an unlocated production asset. Expected input/checkpoint/prediction hashes are
+unchanged. All 948 production/dependency identities were previously located and
+hash-verified; six third-party encoder/dictionary resources remain external only.
 
-`validate_release.py` includes numerical source/link checks, source/figure/script
-hashes, fold isolation, figure display geometry/terminology and archive inventory
-validation. `audit_archive_assets.py --require-local-staging` additionally verifies
-the actual ignored local archive bytes and archive checksum coverage. Neither
-validator changes scientific outputs or runs model training.
+Frozen metadata copies inside `archive_metadata/` are historical preparation
+snapshots. Their bytes and identity hashes are retained; current v1.0.0 GitHub
+documentation supersedes administrative availability/review/publication wording.
+The companion `ZENODO_README.md` states the current scope and reserved DOI without
+rewriting the core archive. Historical recovery/search reports retain acceptance
+and rejection evidence with explicit time scope.
 
-The subsequent Genkai recovery located all 948 expected assets and verified each
-against its unchanged expected SHA-256. All 192 inputs and 576 formal predictions
-were locally reverified. All 24 production Top2000 files match Top3000 prefixes
-in paired values/order; their original CRLF versus LF line endings differ.
-The 174 checkpoints (23,885,006,370 bytes) remain verified on Genkai pending storage.
-Six third-party files remain external and were not staged. See
-`GENKAI_RECOVERY_REPORT.md` and `GENKAI_ASSET_VERIFICATION.tsv`.
+The finalization changes citation/documentation, availability/scope fields,
+release identity and administrative validators only. Source hashes/values, final
+figures, formal predictions, gene order, fold/seed definitions and scientific
+metric/model logic are unchanged. No figure regeneration, model training,
+inference or scientific reevaluation was performed. Historical figure regeneration
+and source-preservation evidence remains in its existing records.
 
-Only the archive audit's obsolete fixed 103/917 count assertion was changed with
-explicit user authorization; counts now derive from the manifest. Registry values,
-source tables, figures and scientific analysis logic remain byte-identical to the
-pre-recovery baseline. Original input/checkpoint/prediction identities are unchanged.
-Full training/inference was not rerun. Checkpoint transfer, author review, original
-software lockfile and raw-read-to-curated-matrix workflow remain unresolved.
-No release, archive upload or DOI issuance was performed.
+`validate_release.py` checks the scientific source reductions, figure links,
+source/figure/script hashes, folds, display geometry and v1.0.0 archive inventory.
+`audit_archive_assets.py --require-local-staging` also verifies all preserved local
+core member bytes and internal checksum coverage. Ignored operating-system Finder
+metadata is excluded from release coverage, consistent with `.gitignore`.
+
+The original raw-read-to-curated-matrix workflow and original run-bound complete
+software lockfile remain unavailable. Exact curated inputs/predictions support
+analysis from those assets; the release is not a self-contained raw-read processing
+or original training environment. External pretrained resources must be obtained
+under their provider terms; identity matching does not establish redistribution
+rights. The repository DOI is not a manuscript DOI.
